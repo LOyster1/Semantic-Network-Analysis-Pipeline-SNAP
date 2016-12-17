@@ -1,0 +1,1 @@
+ALTER TABLE `#__jdownloads_usergroups_limits` ADD `uploads_use_tabs` TINYINT( 1 ) NOT NULL DEFAULT '1' AFTER `uploads_use_editor`;

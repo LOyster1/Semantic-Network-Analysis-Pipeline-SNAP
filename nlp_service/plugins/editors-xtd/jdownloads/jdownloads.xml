@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="editors-xtd" method="upgrade" version="3.1">
+	<name>Button - jDownloads Content</name>
+	<creationDate>2015-09-18</creationDate>
+    <author>Arno Betz</author>
+    <authorEmail>info@jdownloads.com</authorEmail>
+    <authorUrl>www.jdownloads.com</authorUrl>
+    <copyright>Copyright (C) 2015 Arno Betz</copyright>
+    <license>GNU/GPL</license>
+	<version>3.2.38</version>
+	<description>PLG_EDITORS-XTD_JDOWNLOADS_DESCRIPTION</description>
+	<files>
+		<filename plugin="jdownloads">jdownloads.php</filename>
+		<filename plugin="jdownloads">index.html</filename>
+        <folder>assets</folder>
+	</files>
+	<languages>
+			<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownloads.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownloads.sys.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownloads.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownloads.sys.ini</language>
+	</languages>
+	<administration>
+		<languages >
+			<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownloads.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.plg_editors-xtd_jdownloads.sys.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownloads.ini</language>
+			<language tag="de-DE">language/de-DE/de-DE.plg_editors-xtd_jdownloads.sys.ini</language>
+		</languages>
+	</administration>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="frontend" type="list" default="0" label="PLG_EDITORS-XTD_JDOWNLOADS_ENABLE_FRONTEND" description="PLG_EDITORS-XTD_JDOWNLOADS_ENABLE_FRONTEND_DESC">
+					<option value="1">PLG_EDITORS-XTD_JDOWNLOADS_YES</option>
+					<option value="0">PLG_EDITORS-XTD_JDOWNLOADS_NO</option>
+				</field>				
+			</fieldset>
+		</fields>
+	</config>				
+</extension>

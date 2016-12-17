@@ -1,0 +1,10 @@
+dl
+format = edgelist1	
+n=6	
+data:
+up hello 1.0	
+whats hello 1.0	
+whats up 1.0	
+up man 1.0	
+yea up 1.0	
+whats man 1.0	

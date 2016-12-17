@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="COM_JDOWNLOADS_JD_MENU_VIEWDOWNLOAD_LAYOUT">
+    <message>
+        <![CDATA[COM_JDOWNLOADS_JD_MENU_VIEWDOWNLOAD_LAYOUT_DESC]]>
+    </message>
+  </layout>
+  
+  <!-- Add fields to the request variables for the layout. -->
+  <fields name="request">
+        <fieldset name="request"
+            addfieldpath="/administrator/components/com_jdownloads/models/fields">
+
+            <field name="id" type="modal_downloadlist"
+                label="COM_JDOWNLOADS_JD_MENU_VIEWDOWNLOAD_LABEL2"
+                required="true"
+                description="COM_JDOWNLOADS_JD_MENU_VIEWDOWNLOAD_LABEL2_DESC"
+            />
+        </fieldset>
+  </fields>  
+  
+  <fields name="params">
+    <fieldset name="basic">
+                <field name="show_pagination" type="list"
+                description="JGLOBAL_PAGINATION_DESC"
+                label="JGLOBAL_PAGINATION_LABEL"
+            >
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+                <option value="2">JGLOBAL_AUTO</option>
+            </field>
+
+            <field name="show_pagination_results" type="list"
+                label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                description="JGLOBAL_PAGINATION_RESULTS_DESC">
+
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="0">JHIDE</option>
+                <option value="1">JSHOW</option>
+            </field>
+    
+            <field
+                name="show_tags"
+                type="list"
+                label="JGLOBAL_SHOW_TAGS_LABEL"
+                description="JGLOBAL_SHOW_TAGS_DESC">
+                <option value="">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>    
+    
+    </fieldset>
+  </fields>
+</metadata>

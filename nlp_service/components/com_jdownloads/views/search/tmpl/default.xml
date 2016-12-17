@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+    <layout title="COM_JDOWNLOADS_JD_MENU_SEARCH_LAYOUT_TITLE">
+        <message>
+            <![CDATA[COM_JDOWNLOADS_JD_MENU_SEARCH_LAYOUT_TITLE]]>
+        </message>
+    </layout>
+
+	<!-- Add fields to the parameters object for the layout. -->	
+
+	<fields name="params">
+
+		<!-- Basic options. -->
+		<fieldset name="basic" label="COM_JDOWNLOADS_BASIC_OPTIONS">
+
+			<field name="search_areas" type="list"
+				description="COM_JDOWNLOADS_VIEW_SEARCH_AREAS_DESC"
+				label="COM_JDOWNLOADS_VIEW_SEARCH_AREAS_LABEL">
+				<!--<option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>-->
+				<option value="0">COM_JDOWNLOADS_NO</option>
+				<option value="1">COM_JDOWNLOADS_YES</option>
+			</field>
+
+			<field name="show_date" type="list"
+				description="COM_JDOWNLOADS_VIEW_SEARCH_DATE_DESC"
+				label="COM_JDOWNLOADS_VIEW_SEARCH_DATE_LABEL">
+				<!--<option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>-->
+                <option value="0">COM_JDOWNLOADS_NO</option>
+				<option value="1">COM_JDOWNLOADS_YES</option>
+			</field>
+			
+		</fieldset>
+	</fields>
+    
+</metadata>

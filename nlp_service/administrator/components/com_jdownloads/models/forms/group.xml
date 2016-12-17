@@ -1,0 +1,1193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field type="spacer" name="myspacer" hr="true" />
+        
+        <field name="id" type="hidden"
+			required="true"
+			readonly="true"
+		/>
+
+        <field name="group_id" type="hidden"
+            required="true"
+            readonly="true"
+        />        
+        
+		<field name="title" type="text"
+			class="readonly" readonly="true"
+			description=""
+			label="COM_JDOWNLOADS_USERGROUP_EDIT_TITLE_LABEL"
+			size="40"
+		/>
+        
+        <field name="importance" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_IMPORTANCE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_IMPORTANCE"
+            filter="integer" size="10"
+        />        
+
+        <field name="download_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+
+        <field name="download_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+                
+        <field name="download_limit_weekly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_WEEKLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_WEEKLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_limit_weekly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />        
+        
+        <field name="download_limit_monthly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_MONTHLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_MONTHLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_limit_monthly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />                 
+
+        <field name="download_volume_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />         
+
+        <field name="download_volume_limit_weekly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_WEEKLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_WEEKLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_weekly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />           
+
+        <field name="download_volume_limit_monthly" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_MONTHLY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_VOLUME_LIMIT_MONTHLY"
+            filter="integer" size="10"
+        />
+        
+        <field name="download_volume_limit_monthly_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />                                   
+
+        <field name="how_many_times" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_HOW_MANY_TIMES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_HOW_MANY_TIMES"
+            filter="integer" size="10"
+        />
+        
+        <field name="how_many_times_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="download_limit_after_this_time" type="text" default="60" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_AFTER_THIS_TIME_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_LIMIT_AFTER_THIS_TIME"
+            filter="integer" size="4"
+        />                  
+
+        <field name="transfer_speed_limit_kb" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_TRANSFER_SPEED_LIMIT_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_DOWNLOAD_TRANSFER_SPEED_LIMIT"
+            filter="integer" size="10"
+        />                        
+        
+        <field name="upload_limit_daily" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_LIMIT_DAILY_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_LIMIT_DAILY"
+            filter="integer" size="10"
+        />
+        
+        <field name="upload_limit_daily_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_GENERAL_USER_MESSAGE"
+            rows="4" cols="40"
+            filter="safehtml"
+        />           
+        
+        <field name="may_edit_own_downloads" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_OWN_FILES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_OWN_FILES"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>
+
+        <field name="may_edit_all_downloads" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_ALL_FILES_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MAY_EDIT_ALL_FILES"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>        
+
+        <field name="use_private_area" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_CAN_USE_PRIVATE_FILES_AREA_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_CAN_USE_PRIVATE_FILES_AREA"
+            size="1"  
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>
+    
+        <field name="view_captcha" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_CAPTCHA_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_CAPTCHA"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>  
+        
+        <field name="view_report_form" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_REPORT_FORM_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_REPORT_FORM"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>
+        
+        <field name="view_inquiry_form" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_FORM_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_FORM"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>
+        
+        <field name="must_form_fill_out" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_MUST_FORM_FILL_OUT_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_MUST_FORM_FILL_OUT"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>  
+        
+        <field name="countdown_timer_duration" type="text" default="0" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN"
+            filter="integer" size="10"
+        /> 
+
+        <field name="countdown_timer_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_MSG_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_COUNTDOWN_MSG"
+            rows="4" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="view_user_his_limits" type="list" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>        
+        
+        <field name="view_user_his_limits_msg" type="textarea" class="inputbox" 
+            description="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_MSG_DESC"
+            label="COM_JDOWNLOADS_USERGROUPS_VIEW_USER_HIS_LIMITS_MSG_LABEL"
+            rows="8" cols="40"
+            filter="safehtml"
+        />
+        
+        <field name="notes"
+                type="textarea" 
+                rows="4"
+                cols="40" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL" 
+                description="COM_JDOWNLOADS_INTERNAL_NOTE_DESC"
+         />
+         
+         <!-- Fields for upload/creation form --> 
+         
+         <field name="uploads_view_upload_icon"
+                type="checkbox"
+                label="COM_JDOWNLOADS_USERGROUPS_VIEW_UPLOAD_ICON"
+                description="COM_JDOWNLOADS_USERGROUPS_VIEW_UPLOAD_ICON_DESC"
+                class="inputbox"
+                value="1"
+                default="1"
+         />
+
+         <field name="uploads_can_change_category"
+                type="checkbox"
+                label="COM_JDOWNLOADS_USERGROUPS_CAN_CHANGE_FILES_CAT"
+                description="COM_JDOWNLOADS_USERGROUPS_CAN_CHANGE_FILES_CAT_DESC"
+                class="inputbox"
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="uploads_allow_custom_tags"
+                type="checkbox"
+                label="COM_JDOWNLOADS_USERGROUPS_ALLOW_CUSTOM_TAGS"
+                description="COM_JDOWNLOADS_USERGROUPS_ALLOW_CUSTOM_TAGS_DESC"
+                class="inputbox"
+                value="1"
+                default="1"
+         />      
+
+         <field name="uploads_default_access_level"
+                type="accesslevel"
+                label="COM_JDOWNLOADS_USERGROUPS_DEFAULT_ACCESS_LEVEL"
+                description="COM_JDOWNLOADS_USERGROUPS_DEFAULT_ACCESS_LEVEL_DESC"
+                class="inputbox"
+                size="1"
+                default="0">
+                <option value="0">COM_JDOWNLOADS_SELECT_ACCESS</option>  
+         </field>
+         
+         <field name="uploads_auto_publish"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_AUTO_PUBLISH" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_AUTO_PUBLISH_DESC"
+                value="1"
+                default="0"
+         />                             
+
+         <field name="uploads_allowed_types"
+                type="textarea" 
+                rows="2"
+                cols="40"
+                default="zip,rar"
+                class="inputbox"  
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_TYPES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_TYPES_DESC"
+         />  
+
+         <field name="uploads_allowed_preview_types"
+                type="textarea" 
+                rows="2"
+                cols="40"   
+                default="mp3,mp4"
+                class="inputbox"  
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_PREV_TYPES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_ALLOWED_PREV_TYPES_DESC"
+         />          
+         
+         <field name="uploads_maxfilesize_kb"
+                type="text" 
+                default="2048" 
+                class="inputbox" 
+                filter="integer" size="15"                
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_FILESIZE" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_FILESIZE_DESC"
+         />          
+
+         <field name="uploads_form_text"
+                type="textarea" 
+                rows="4"
+                cols="40" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_FORM_TEXT" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_FORM_TEXT_DESC"
+         />           
+
+         <field name="uploads_max_amount_images"
+                type="text" 
+                default="3" 
+                class="inputbox" 
+                filter="integer" size="2"   
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_AMOUNT_IMAGES" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_MAX_AMOUNT_IMAGES_DESC"
+         />
+         
+         <field name="uploads_use_editor"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_EDITOR" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_EDITOR_DESC"
+                value="1"
+                default="1"
+         />
+         
+         <field name="uploads_use_tabs"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_TABS" 
+                description="COM_JDOWNLOADS_USERGROUPS_UPLOAD_USE_TABS_DESC"
+                value="1"
+                default="1"
+         /> 
+         
+         <!-- Activation / de-activation from form fields  -->
+         
+         <field name="form_title"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_TITLE" 
+                description=""
+                value="1"
+                default="1"
+         />
+         
+         <field name="form_alias"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ALIAS" 
+                description=""
+                value="1"
+                default="1"
+         />
+         
+         <field name="form_alias_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />           
+
+         <field name="form_update_active"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_EDIT_FILES_SET_UPDATE_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_version"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_RELEASE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_version_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />            
+
+         <field name="form_access"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ACCESS" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_file_language"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LANGUAGE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_file_language_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />            
+         
+         <field name="form_file_system"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SYSTEM" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_file_system_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />            
+         
+         <field name="form_license"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_LICENSE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_license_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                                                                                            
+        
+         <field name="form_confirm_license"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CONFIRM_LICENSE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+         
+         <field name="form_short_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_SHORT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_short_desc_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                   
+
+         <field name="form_long_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_DESCRIPTION_LONG" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_long_desc_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_changelog"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_CHANGELOG" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_changelog_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_category"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_CAT" 
+                description=""
+                value="1"
+                default="1"
+         /> 
+         
+         <field name="form_language"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_LANGUAGE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_published"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_PUBLISHED" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_featured"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_FEATURED" 
+                description=""
+                value="1"
+                default="0"
+         />
+
+         <field name="form_creation_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CREATED_DATE" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_creation_date_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_modified_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_MODIFIED_DATE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_timeframe"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_FILE_START_END_DATE_ACTIVATE_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_views"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_VIEWS" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_downloaded"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_HITS" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_ordering"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ORDERING" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_password"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_password_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_price"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PRICE" 
+                description=""
+                value="1"
+                default="0"
+         />
+
+         <field name="form_price_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_website"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_URL_HOME" 
+                description=""
+                value="1"
+                default="0"
+         />                                                                                                                                        
+
+         <field name="form_website_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_author_name"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR" 
+                description=""
+                value="1"
+                default="0"
+         />    
+
+         <field name="form_author_name_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_author_mail"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_AUTHOR_URL" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+
+         <field name="form_author_mail_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_file_pic"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESLIST_PIC" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_file_pic_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />                                            
+
+         <field name="form_select_main_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_USERGROUPS_SELECT_MAIN_FILE" 
+                description=""
+                value="1"
+                default="0"
+         /> 
+         
+         <field name="form_select_main_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />          
+         
+         <field name="form_file_size"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_SIZE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+         
+         <field name="form_file_date"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_EDIT_FILE_FILE_DATE_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+
+         <field name="form_file_date_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+         
+         <field name="form_select_preview_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_PREVIEW_FILE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+
+         <field name="form_select_preview_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+         
+         <field name="form_external_file"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILE_EDIT_EXT_DOWNLOAD_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+
+         <field name="form_external_file_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+
+         <field name="form_mirror_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />  
+
+         <field name="form_mirror_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+         
+         <field name="form_mirror_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_MIRROR_URL_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_mirror_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />             
+         
+         <field name="form_images"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_BACKEND_FILESEDIT_THUMBNAIL_UPLOAD_TITLE" 
+                description=""
+                value="1"
+                default="0"
+         />                                                                          
+
+         <field name="form_images_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />   
+         
+         <field name="form_meta_desc"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_META_DESCRIPTION_LABEL" 
+                description=""
+                value="1"
+                default="0"
+         />  
+         
+         <field name="form_meta_key"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_META_KEYWORDS_LABEL" 
+                description=""
+                value="1"
+                default="0"
+         />  
+         
+         <field name="form_robots"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_ROBOTS_LABEL" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_tags"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_TAGS_LABEL" 
+                description=""
+                value="1"
+                default="0"
+         />         
+
+         <field name="form_extra_select_box_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SELECT_BOX" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_select_box_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_select_box_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SELECT_BOX" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_select_box_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_select_box_3"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SELECT_BOX" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_select_box_3_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_select_box_4"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SELECT_BOX" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_select_box_4_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_select_box_5"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SELECT_BOX" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_select_box_5_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_short_input_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SHORT_INPUT" 
+                description=""
+                value="1"
+                default="0"
+         />
+
+         <field name="form_extra_short_input_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_short_input_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SHORT_INPUT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_short_input_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_short_input_3"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SHORT_INPUT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_short_input_3_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_short_input_4"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SHORT_INPUT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_short_input_4_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_short_input_5"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_SHORT_INPUT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_short_input_5_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_date_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_DATE" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_date_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+         
+         <field name="form_extra_date_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_DATE" 
+                description=""
+                value="1"
+                default="0"
+         />
+
+         <field name="form_extra_date_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_large_input_1"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_TEXT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_large_input_1_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />         
+
+         <field name="form_extra_large_input_2"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_CUSTOM_FIELD_TEXT" 
+                description=""
+                value="1"
+                default="0"
+         />
+         
+         <field name="form_extra_large_input_2_x"
+                type="checkbox" 
+                class="inputbox"
+                label="COM_JDOWNLOADS_SELECT_AS_REQUIRED" 
+                description="COM_JDOWNLOADS_SELECT_AS_REQUIRED_DESC"
+                value="1"
+                default="0"
+         />
+         
+         <field type="spacer" name="spacer1" hr="true" />                                                                                                                     
+                                      
+	</fieldset>
+                                                                          
+</form>

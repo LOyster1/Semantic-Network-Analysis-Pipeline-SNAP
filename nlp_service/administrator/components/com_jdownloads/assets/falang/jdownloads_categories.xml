@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+<name>jDownloads Categories</name>
+<author>Arno Betz</author>
+<copyright>www.jdownloads.com</copyright>
+<version>3.2</version>
+<description>Definition for the jDownloads component (series 3.2+) - Categories</description>
+<reference>
+    <table name="jdownloads_categories">
+        <field type="referenceid" name="id" translate="0">ID</field>
+        <field type="titletext" name="title" translate="1">Title</field>
+        <field type="text" name="alias" translate="0">Alias</field>
+        <field type="textarea" name="metadesc" translate="1">Meta Description</field>
+        <field type="textarea" name="metakey" translate="1">Meta Keys</field>
+        <field type="htmltext" name="description" translate="1">Description</field>
+        <field type="textarea" name="notes" translate="1">Notes</field>
+    </table>
+</reference>
+</falang>

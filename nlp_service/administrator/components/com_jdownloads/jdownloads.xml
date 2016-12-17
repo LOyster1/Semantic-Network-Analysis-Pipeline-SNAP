@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.1" method="upgrade">
+	<name>com_jDownloads</name>
+	<creationDate>2015-12-19</creationDate>
+	<author>Arno Betz</author>
+	<authorEmail>info@jdownloads.com</authorEmail>
+	<authorUrl>http://www.jdownloads.com</authorUrl>
+	<copyright>(C) 2007-2015 www.jdownloads.com</copyright>
+	<license>GNU/GPL - http://www.gnu.org/copyleft/gpl.html</license>
+	<version>3.2.41</version>
+	<targetjoomla>3.2</targetjoomla>
+    <description></description>
+	
+	<!-- Runs on install/uninstall/update -->
+	<scriptfile>script.php</scriptfile>
+	
+	<install> <!-- Runs on install -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+		</sql>
+	</install>
+
+	<uninstall> <!-- Runs on uninstall -->
+		<sql>
+			<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+		</sql>
+	</uninstall>
+
+	<update> <!-- Runs on update; New in 1.6 -->
+		<schemas>
+			<schemapath type="mysql">sql/updates/mysql</schemapath>
+		</schemas>
+	</update>	
+	
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder
+		to copy FROM in the package to install therefore files copied
+		in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>jdownloads.php</filename>
+		<filename>controller.php</filename>
+		<filename>metadata.xml</filename>
+        <filename>router.php</filename>
+        <filename>alphauserpoints_rule.xml</filename>
+        <folder>views</folder>
+		<folder>models</folder>
+		<folder>helpers</folder>
+		<folder>controllers</folder>
+		<folder>assets</folder>
+	</files>
+
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.ini</language>
+	</languages>
+ 
+	<administration>
+	<!-- Administration Menu Section -->
+	<menu img="components/com_jdownloads/assets/images/m_jdownloads.gif" link="option=com_jdownloads">COM_JDOWNLOADS</menu>
+    <submenu>
+      <menu img="components/com_jdownloads/assets/images/m_jdownloads.gif" link="option=com_jdownloads">COM_JDOWNLOADS_CONTROL_PANEL</menu>
+      <menu img="components/com_jdownloads/assets/images/m_categories.gif" link="option=com_jdownloads&amp;view=categories">COM_JDOWNLOADS_CATEGORIES</menu>
+      <menu img="components/com_jdownloads/assets/images/m_downloads.gif" link="option=com_jdownloads&amp;view=downloads">COM_JDOWNLOADS_DOWNLOADS</menu>
+      <menu img="components/com_jdownloads/assets/images/m_files.gif" link="option=com_jdownloads&amp;view=files">COM_JDOWNLOADS_FILES</menu>
+	  <menu img="components/com_jdownloads/assets/images/m_licenses.gif" link="option=com_jdownloads&amp;view=licenses">COM_JDOWNLOADS_LICENSES</menu>
+      <menu img="components/com_jdownloads/assets/images/m_templates.gif" link="option=com_jdownloads&amp;view=layouts">COM_JDOWNLOADS_LAYOUTS</menu>
+      <menu img="components/com_jdownloads/assets/images/m_logs.gif" link="option=com_jdownloads&amp;view=logs">COM_JDOWNLOADS_LOGS</menu>
+      <menu img="components/com_jdownloads/assets/images/m_groups.gif" link="option=com_jdownloads&amp;view=groups">COM_JDOWNLOADS_USER_GROUPS</menu>
+      <menu img="components/com_jdownloads/assets/images/m_config.gif" link="option=com_jdownloads&amp;view=config">COM_JDOWNLOADS_CONFIGURATION</menu>
+      <menu img="components/com_jdownloads/assets/images/m_tools.gif" link="option=com_jdownloads&amp;view=tools">COM_JDOWNLOADS_TOOLS</menu>
+      <menu img="components/com_jdownloads/assets/images/m_info.gif" link="option=com_jdownloads&amp;view=info">COM_JDOWNLOADS_TERMS_OF_USE</menu>
+    </submenu>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+	<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>htaccess.txt</filename>
+			<filename>jdownloads.php</filename>
+			<filename>controller.php</filename>
+			<folder>sql</folder>
+			<folder>help</folder>
+			<folder>helpers</folder>
+			<folder>assets</folder>
+			<folder>tables</folder>
+			<folder>models</folder>
+			<folder>views</folder>
+            <folder>controllers</folder>
+            <folder>language</folder>			
+	</files>
+		<languages folder="admin">
+			<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.ini</language>
+			<language tag="en-GB">language/en-GB/en-GB.com_jdownloads.sys.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.ini</language>
+            <language tag="de-DE">language/de-DE/de-DE.com_jdownloads.sys.ini</language>
+		</languages>
+	</administration>
+
+	<!-- UPDATESERVER DEFINITION -->
+	<updateservers>
+		<!-- Note: No spaces or linebreaks allowed between the server tags -->
+		<server type="extension" priority="1" name="jDownloads Update Site">http://www.jdownloads.com/updates/3.2/final/jdownloads-update.xml</server>
+	</updateservers>
+	
+</extension>

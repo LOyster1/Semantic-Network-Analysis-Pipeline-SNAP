@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JDOWNLOADS_JD_MENU_CREATE_DOWNLOAD_LAYOUT" option="COM_JDOWNLOADS_JD_MENU_CREATE">
+		<message>
+			<![CDATA[COM_JDOWNLOADS_JD_MENU_CREATE_DOWNLOAD_LAYOUT_DESC]]>
+		</message>
+	</layout>
+	
+    <fieldset addfieldpath="/administrator/components/com_jdownloads/models/fields"></fieldset>
+    <fields name="params">
+		<fieldset name="basic">
+			<field name="enable_category" 
+				type="radio" 
+				default="0" 
+				label="COM_JDOWNLOADS_FE_CREATE_DOWNLOAD_CATEGORY_LABEL" 
+				description="COM_JDOWNLOADS_FE_CREATE_DOWNLOAD_ARTICLE_CATEGORY_DESC">
+					<option value="1">COM_JDOWNLOADS_YES</option>
+					<option value="0">COM_JDOWNLOADS_NO</option>
+			</field>
+			<field name="catid" 
+				type="jdCategorySelect" 
+				label="COM_JDOWNLOADS_CHOOSE_CATEGORY_LABEL" 
+				description="COM_JDOWNLOADS_CHOOSE_CATEGORY_DESC" />
+		</fieldset>
+	</fields>
+</metadata>

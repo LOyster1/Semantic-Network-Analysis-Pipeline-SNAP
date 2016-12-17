@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+<name>JDownloads Downloads</name>
+<author>Arno Betz</author>
+<copyright>www.jdownloads.com</copyright>
+<version>3.2</version>
+<description>Definition for the jDownloads component (series 3.2+) - Downloads</description>
+<reference>
+      <table name="jdownloads_files">
+          <field type="referenceid" name="file_id" translate="0">ID</field>
+          <field type="titletext" name="file_title" translate="1">Title</field>
+          <field type="text" name="file_alias" translate="0">Alias</field>
+          <field type="text" name="release" translate="1">Version</field>
+          <field type="htmltext" name="description" translate="1">Description</field>
+          <field type="htmltext" name="description_long" translate="1">Description long</field>
+          <field type="htmltext" name="changelog" translate="1">Changelog</field>
+          <field type="text" name="price" translate="1">Price</field>
+          <field type="text" name="url_license" translate="1">License URL</field>
+          <field type="text" name="url_home" translate="1">Author URL</field>
+          <field type="textarea" name="metadesc" translate="1">Meta Description</field>
+          <field type="textarea" name="metakey" translate="1">Meta Keys</field>
+          <field type="textarea" name="notes" translate="1">Notes</field>
+          <field type="htmltext" name="custom_field_13" translate="1">Custom Textfield 13 (when used)</field>
+          <field type="htmltext" name="custom_field_14" translate="1">Custom Textfield 14 (when used)</field>
+      </table>
+  </reference>
+</falang>

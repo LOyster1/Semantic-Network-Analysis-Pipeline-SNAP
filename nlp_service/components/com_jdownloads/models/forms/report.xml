@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: report.xml - send report about a download
+	-->
+<form>
+
+    <fieldset addfieldpath="/administrator/components/com_jdownloads/models/fields"></fieldset>
+
+		<field name="file_id" 
+            type="hidden"
+            class="readonly" />
+
+		<field name="file_title" 
+            type="text" 
+			size="40" 
+            label="COM_JDOWNLOADS_REPORT_FILE_TITLE_LABEL"
+			description="" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="url_download" 
+            type="text" 
+            size="40" 
+            label="COM_JDOWNLOADS_REPORT_FILE_NAME_LABEL"
+            description="" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="cat_id" 
+            type="hidden"
+            class="readonly" />
+
+        <field name="cat_title" 
+            type="text" 
+            size="40" 
+            label="COM_JDOWNLOADS_REPORT_CATEGORY_NAME_LABEL"
+            description="" 
+            readonly="true" 
+            class="readonly" />
+
+        <field name="text"
+                type="textarea" 
+                rows="5"
+                cols="35" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_REPORT_NOTE_LABEL" 
+                description="COM_JDOWNLOADS_REPORT_NOTE_DESC" />
+                   
+        <field name="reason" 
+            type="list"
+            label="COM_JDOWNLOADS_REPORT_REASON_LABEL"
+            description="COM_JDOWNLOADS_REPORT_REASON_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option
+                value="1">COM_JDOWNLOADS_REPORT_REASON_MISSING</option>
+            <option
+                value="2">COM_JDOWNLOADS_REPORT_REASON_BAD_FILE</option>
+            <option
+                value="3">COM_JDOWNLOADS_REPORT_REASON_OTHERS</option>
+        </field>                          
+  
+        <field name="name"
+            type="text"
+            class="inputbox" 
+            size="40"            
+            filter="unset"
+            label="COM_JDOWNLOADS_REPORT_NAME_LABEL"
+            description=""
+            readonly="false"  
+            required="true" />  
+            
+        <field name="email"
+            type="text"
+            class="inputbox" 
+            size="40"            
+            filter="unset"
+            label="COM_JDOWNLOADS_REPORT_EMAIL_LABEL"
+            description="" 
+            readonly="false" 
+            required="true" />
+  
+    </form>

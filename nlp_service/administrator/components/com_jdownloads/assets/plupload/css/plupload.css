@@ -1,0 +1,258 @@
+/*
+
+default style for mediamu component
+
+*/
+
+.icon-48-mediamu {
+    background-image: url('../img/mediamu.png');
+}
+
+#mediamu_wrapper {
+    width: 100%;
+}
+
+#uploader_content {
+	float: left;
+	width: 48%;
+}
+
+#filebroswer_content {
+	float: right;
+	width: 48%;
+}
+
+div.upload_in_progress {
+    display: block;
+    width: 100%;
+    height: 344px;
+    background: transparent url('../img/upload_in_progress.gif') center center no-repeat;
+}
+
+#log {
+    width: auto;
+    height: 120px;
+    display: none;
+    padding: 10px;
+    overflow: scroll;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+}
+
+
+#fm_breadcrumbs {
+    padding: 5px;
+}
+
+#filebroswer_container {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+a#select {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+a.select {
+    background: transparent url('../img/select.png') center center no-repeat;
+}
+
+a.deselect {
+    background: transparent url('../img/deselect.png') center center no-repeat;
+}
+
+table#files
+{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 12px;
+	width: 100%;
+	text-align: left;
+	border-collapse: collapse;
+        margin-bottom: 50px;
+}
+
+table#files th
+{
+	font-size: 13px;
+	font-weight: normal;
+	padding: 8px;
+        background: url("../img/backgrounds.gif") repeat-x scroll 0 0 #2A2C2E;
+	border-top: 4px solid #DFDFDF;
+	border-bottom: 1px solid #fff;
+        color: #ffffff;
+        font-weight: bold;
+}
+
+table#files th.file_icon, table#files td.file_icon {
+    padding: 0;
+    width: 32px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+table#files td.file {
+    background: url('../img/ext/_blank.png') center center no-repeat;
+}
+
+table#files th.last_changed {
+    width: 20px;
+}
+
+table#files th.size {
+    width: 100px;
+}
+
+table#files th.selection {
+    width: 20px;
+}
+
+table#files tr:hover td {
+     background: #d0dafd;
+}
+
+table#files tr:hover td.file
+{
+        background: #d0dafd url('../img/ext/_blank.png') center center no-repeat;
+}
+
+table#files td
+{
+	padding: 8px;
+	border-bottom: 1px solid #fff;
+	color: #669;
+	border-top: 1px solid transparent;
+}
+
+table#files td.file_name a {
+    display: block;
+}
+
+table#files td.file_name a:hover {
+    color: #ffffff;
+}
+
+table#files td.size {
+    text-align: left;
+}
+
+ul.bc_list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.bc_list li {
+    padding: 0;
+    margin: 10px 0;
+    display: inline;
+}
+
+ul.bc_list li a {
+    padding: 5px;
+    font-size: 10px;
+}
+
+ul.bc_list li a#new_folder {
+    padding: 0;
+    margin: 0;
+}
+
+ul.bc_list li a:hover {
+    text-decoration: underline;
+}
+
+div#folder_input_form {
+    padding: 10px;
+    display: none;
+}
+
+span.loading {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('../img/throbber.gif') center center no-repeat;
+}
+
+table#files th.file_icon span.loading {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: url('../img/throbber.gif') center center no-repeat;
+}
+
+
+/* tooltip styling */
+.tooltip {
+    display:none;
+    background: transparent url('../img/tt_bg.png') center center no-repeat;
+    height:194px;
+    width:auto;
+    font-size:11px;
+    color: #e4e400;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tooltip span {
+    color: #f4f4f4;
+}
+
+.tooltip div.prev_left {
+    display: block;
+    width: 140px;
+    margin: 20px 10px 0 20px;
+    height: 104px;
+    float: left;
+}
+
+.tooltip div.prev_left img {
+    max-width: 140px;
+    max-height: 104px;
+}
+
+.tooltip div.prev_right {
+    display: block;
+    width: 140px;
+    margin: 20px 20px 0 10px;
+    height: 104px;
+    float: left;
+}
+
+.tooltip div.prev_footer, .tooltip div.prev_header {
+    display: block;
+    width: 100%;
+    clear: both;
+    float: none;
+    height: 20px;
+    padding: 5px 10px 0 20px;
+}
+
+span.error_msg {
+    display: block;
+    padding: 5px;
+    border: 1px solid #ff0000;
+    text-align: center;
+    background-color: #ff9999;
+}
+
+span.failed_uploading {
+    border-bottom: 1px solid #ff0000;
+}
+
+span.success_uploading {
+    border-bottom: 1px solid #00cc33;
+}
+
+span.log_sep {
+    display: block;
+    width: 100%;
+    border-top: 1px dotted #666666;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+
+  
+    

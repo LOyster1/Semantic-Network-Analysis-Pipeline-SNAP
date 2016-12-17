@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+<name>JDownloads Usergroups Limits</name>
+<author>Arno Betz</author>
+<copyright>www.jdownloads.com</copyright>
+<version>3.2</version>
+<description>Definition for the jDownloads component (series 3.2+) - Usergroups Limits</description>
+<reference>
+      <table name="jdownloads_usergroups_limits">
+          <field type="referenceid" name="id" translate="0">ID</field>
+          <field type="int" name="group_id" translate="0">User Group ID</field>
+          <field type="int" name="importance" translate="0">Ranking</field>
+          <field type="int" name="download_limit_daily" translate="0">Daily Download Limit</field>
+          <field type="htmltext" name="download_limit_daily_msg" translate="1">Daily Download Limit Hint</field>
+          <field type="int" name="download_limit_weekly" translate="0">Weekly Download Limit</field>
+          <field type="htmltext" name="download_limit_weekly_msg" translate="1">Weekly Download Limit Hint</field>
+          <field type="int" name="download_limit_monthly" translate="0">Monthly Download Limit</field>
+          <field type="htmltext" name="download_limit_monthly_msg" translate="1">Monthly Download Limit Hint</field>
+          <field type="int" name="download_volume_limit_daily" translate="0">Daily Megabyte Limit</field>
+          <field type="htmltext" name="download_volume_limit_daily_msg" translate="1">Daily Megabyte Limit Hint</field>
+          <field type="int" name="download_volume_limit_weekly" translate="0">Weekly Megabyte Limit</field>
+          <field type="htmltext" name="download_volume_limit_weekly_msg" translate="1">Weekly Megabyte Limit Hint</field>
+          <field type="int" name="download_volume_limit_monthly" translate="0">Monthly Megabyte Limit</field>
+          <field type="htmltext" name="download_volume_limit_monthly_msg" translate="1">Monthly Megabyte Limit Hint</field>
+          <field type="int" name="how_many_times" translate="0">Number of Downloads Limit</field>
+          <field type="htmltext" name="how_many_times_msg" translate="1">Number of Downloads Limit Hint</field>          
+          <field type="int" name="upload_limit_daily" translate="0">Daily Creation Limit</field>
+          <field type="htmltext" name="upload_limit_daily_msg" translate="1">Daily Creation Limit Hint</field> 
+          <field type="int" name="countdown_timer_duration" translate="0">Activate Waiting Time</field>
+          <field type="htmltext" name="countdown_timer_msg" translate="1">Waiting Time Message</field>          
+          <field type="int" name="view_user_his_limits" translate="0">View User Limits</field>
+          <field type="htmltext" name="view_user_his_limits_msg" translate="1">Limitation Message</field> 
+      </table>
+  </reference>
+</falang>

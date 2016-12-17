@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<falang type="contentelement">
+<name>jDownloads Licenses</name>
+<author>Arno Betz</author>
+<version>3.2</version>
+<description>Definition for the jDownloads component (series 3.2+) - Licenses</description>
+<reference>
+    <table name="jdownloads_licenses">
+        <field type="referenceid" name="id" translate="0">ID</field>
+        <field type="titletext" name="title" translate="1">Title</field>
+        <field type="text" name="alias" translate="1">Alias</field>
+        <field type="htmltext" name="description" translate="1">Description</field>
+    </table>
+</reference>
+</falang>

@@ -1,0 +1,23 @@
+/* mod_jdownloads_last_downloaded_files */
+
+/* Text field on the top */
+.td_jd_ldf_before {
+	font-size: small;
+	padding-bottom: 10px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+}
+
+/* Text field on the bottom */
+.td_jd_ldf_after {
+	font-size: small;
+	padding-bottom: 0;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 10px;
+}
+
+.td_jd_ldf_date_row {
+	font-size: 8pt;
+	}

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: template.xml - edit layouts
+	-->
+    
+<form>
+	<fieldset>
+		<field name="id" type="text" default="0" label="COM_JDOWNLOADS_ID"
+			readonly="true" class="readonly"
+			description="COM_JDOWNLOADS_ID_LABEL"/>
+
+        <field name="template_name" type="text" class="inputbox"
+			size="60" label="COM_JDOWNLOADS_TITLE"
+			description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_NAME_DESCRIPTION" required="true" />
+
+        <field name="template_typ" type="list" readonly="true"
+            label="COM_JDOWNLOADS_BACKEND_TEMPLIST_TYP" description=""
+            class="inputbox" size="1" default=""
+        >
+            <option value="1">COM_JDOWNLOADS_BACKEND_TEMP_TYP1</option>
+            <option value="2">COM_JDOWNLOADS_BACKEND_TEMP_TYP2</option>
+            <option value="3">COM_JDOWNLOADS_BACKEND_TEMP_TYP3</option>
+            <option value="4">COM_JDOWNLOADS_BACKEND_TEMP_TYP4</option>
+            <option value="5">COM_JDOWNLOADS_BACKEND_TEMP_TYP5</option>
+            <option value="6">COM_JDOWNLOADS_BACKEND_TEMP_TYP6</option>
+            <option value="7">COM_JDOWNLOADS_BACKEND_TEMP_TYP7</option>                                    
+        </field>
+       
+        <field name="note" type="textarea" class="inputbox"
+            rows="3" cols="60" label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL"
+            description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_NOTE_DESC" />
+
+        <field name="cols" type="integer" default="1"
+             label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_AMOUNT_COL_TITLE"
+             description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_AMOUNT_COL_DESC"
+             first="1" last="9" step="1" />            
+
+        <field name="template_before_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+            filter="raw"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_BEFORE_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_BEFORE_DESC" />
+             
+		<field name="template_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+			filter="raw"
+			label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_TEXT_DESC" />
+            
+        <field name="template_after_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+            filter="raw"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_AFTER_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_AFTER_DESC" />            
+            
+        <field name="template_header_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+            filter="raw"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_HEADER_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_HEADER_DESC" />
+
+        <field name="template_subheader_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+            filter="raw"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_SUBHEADER_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_SUBHEADER_DESC" />
+            
+        <field name="template_footer_text" type="editor" buttons="false" hide=""
+            editor="yes"
+            class="inputbox"
+            filter="raw"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_FOOTER_TEXT" description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_FOOTER_FILES_CATS_DESC" />                                    
+            
+        <field
+            name="language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC"
+            class="inputbox">
+            <option value="*">JALL</option>
+        </field>
+        
+        <field name="checkbox_off"
+            type="list"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_CHECKBOX_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_CHECKBOX_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option
+                value="1">COM_JDOWNLOADS_NO</option>
+            <option
+                value="0">COM_JDOWNLOADS_YES</option>
+        </field>
+        
+        <field name="use_to_view_subcats"
+            type="list"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_USE_SUBCATS_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_USE_SUBCATS_DESC"
+            class="inputbox"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>        
+        
+        <field name="symbol_off"
+            type="list"
+            label="COM_JDOWNLOADS_BACKEND_TEMPEDIT_SYMBOLE_TITLE"
+            description="COM_JDOWNLOADS_BACKEND_TEMPEDIT_SYMBOLE_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option
+                value="1">COM_JDOWNLOADS_NO</option>
+            <option
+                value="0">COM_JDOWNLOADS_YES</option>
+        </field>        
+        
+        <field name="locked"
+            type="list"
+            readonly="true"
+            label="COM_JDOWNLOADS_BACKEND_TEMPLIST_LOCKED"
+            description="COM_JDOWNLOADS_BACKEND_TEMPLIST_LOCKED_DESC"
+            class="inputbox"
+            size="1"
+            default="0">
+            <option
+                value="1">COM_JDOWNLOADS_YES</option>
+            <option
+                value="0">COM_JDOWNLOADS_NO</option>
+        </field>        
+
+        <field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+	</fieldset>
+
+	<fields name="params">
+		<fieldset name="jbasic" label="COM_JDOWNLOADS_LIC_FIELDSET_OPTIONS">
+		</fieldset>
+	</fields>
+</form>

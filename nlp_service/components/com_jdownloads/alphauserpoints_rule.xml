@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alphauserpoints>
+    <component>jDownloads</component>
+    <rules>
+        <rule>
+            <name>User Upload published</name>
+            <description>Assign points when a user has an uploaded file published in jDownloads (may also be negative to reduce points)</description>
+            <plugin_function>plgaup_jdownloads_user_upload_published</plugin_function>
+            <category>ot</category>
+            <fixed_points>true</fixed_points>
+        </rule>
+        <rule>
+            <name>User downloads a file</name>
+            <description>Assign points when a registered user downloads a file from jDownloads (may also be negative to reduce points).</description>
+            <plugin_function>plgaup_jdownloads_user_download</plugin_function>
+            <category>ot</category>
+            <fixed_points>true</fixed_points>
+        </rule>
+        <rule>
+            <name>User downloads a file (uses price)</name>
+            <description>Reduce points when a registered user downloads a file from jDownloads. Uses the 'price' field from the Download for the number of points.</description>
+            <plugin_function>plgaup_jdownloads_user_download_use_price</plugin_function>
+            <category>ot</category>
+            <fixed_points>false</fixed_points>
+        </rule>
+        <rule>
+            <name>Uploader gets points for downloaded files</name>
+            <description>Assign points to the file uploader when a user downloads this file from jDownloads. Uses a fixed number of points as defined here.</description>
+            <plugin_function>plgaup_jdownloads_downloader_to_uploader</plugin_function>
+            <category>ot</category>
+            <fixed_points>true</fixed_points>
+        </rule>
+        <rule>
+            <name>Uploader gets points for downloaded files (uses price)</name>
+            <description>Assign points to the file uploader when a user downloads this file from jDownloads. Uses the 'price' field from the Download for the number of points.</description>
+            <plugin_function>plgaup_jdownloads_downloader_to_uploader_use_price</plugin_function>
+            <category>ot</category>
+            <fixed_points>false</fixed_points>
+        </rule>
+   </rules>
+</alphauserpoints>

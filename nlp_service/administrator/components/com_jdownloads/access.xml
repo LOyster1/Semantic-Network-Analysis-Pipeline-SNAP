@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<access component="com_jdownloads">
+	<section name="component">
+		<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+		<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		<action name="core.create" title="COM_JDOWNLOADS_ACTION_CREATE" description="COM_JDOWNLOADS_ACTION_CREATE_DESC" />
+		<action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_DESC" />
+		<action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_DESC" />
+		<action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+		<action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_GENERAL_DESC" />
+        <action name="edit.config"   title="COM_JDOWNLOADS_ACTION_EDIT_CONFIG"   description="COM_JDOWNLOADS_ACTION_EDIT_CONFIG_DESC" />
+        <action name="edit.user.limits"   title="COM_JDOWNLOADS_ACTION_EDIT_USER_LIMITS"   description="COM_JDOWNLOADS_ACTION_EDIT_USER_LIMITS_DESC" />
+	</section>
+    <section name="category">
+        <action name="core.create" title="COM_JDOWNLOADS_ACTION_CREATE" description="COM_JDOWNLOADS_ACTION_CREATE_COMPONENT_DESC" />
+        <action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_COMPONENT_DESC" />
+        <action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_COMPONENT_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_CATEGORY_DESC" />
+    </section>
+    <section name="download">
+        <action name="core.create" title="JACTION_CREATE" description="JACTION_CREATE_COMPONENT_DESC" />
+        <action name="core.delete" title="COM_JDOWNLOADS_ACTION_DELETE" description="COM_JDOWNLOADS_ACTION_DELETE_ITEM_DESC" />
+        <action name="core.edit" title="COM_JDOWNLOADS_ACTION_EDIT" description="COM_JDOWNLOADS_ACTION_EDIT_ITEM_DESC" />
+        <action name="core.edit.state" title="JACTION_EDITSTATE" description="JACTION_EDITSTATE_COMPONENT_DESC" />
+        <action name="core.edit.own" title="JACTION_EDITOWN" description="JACTION_EDITOWN_COMPONENT_DESC" />
+        <action name="download" title="COM_JDOWNLOADS_ACTION_DOWNLOAD" description="COM_JDOWNLOADS_ACTION_DOWNLOAD_DESC" />
+    </section>    
+</access>

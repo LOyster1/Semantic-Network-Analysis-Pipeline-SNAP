@@ -1,0 +1,2 @@
+ALTER TABLE `#__jdownloads_files` ADD `featured` TINYINT( 1 ) NOT NULL DEFAULT '0' AFTER `ordering`;
+ALTER TABLE `#__jdownloads_usergroups_limits` ADD `form_featured` TINYINT( 1 ) NOT NULL DEFAULT '0' AFTER `form_published`;

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_JDOWNLOADS_JD_MENU_CATEGORIES_LIST_LAYOUT">
+		<message>
+			<![CDATA[COM_JDOWNLOADS_JD_MENU_CATEGORIES_LIST_LAYOUT_DESC]]>
+		</message>
+	</layout>
+        <fieldset addfieldpath="/administrator/components/com_jdownloads/models/fields"></fieldset> 
+        
+    <fields name="params">
+
+        <fieldset name="basic" label="COM_JDOWNLOADS_CATEGORY_OPTIONS">
+                <field name="settings_notes" type="jdpuretext"
+                       label="COM_JDOWNLOADS_MENU_OPTIONS_DESC"
+                />
+                
+                <field name="show_description" type="list"
+                    description="COM_JDOWNLOADS_SHOW_CATEGORY_DESCRIPTION_DESC"
+                    label="COM_JDOWNLOADS_SHOW_CATEGORY_DESCRIPTION_LABEL" >
+                    
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                </field>
+                
+                <field name="show_subcat_desc" type="list"
+                    description="COM_JDOWNLOADS_SHOW_SUBCATEGORY_DESCRIPTIONS_DESC"
+                    label="COM_JDOWNLOADS_SHOW_SUBCATEGORY_DESCRIPTIONS_LABEL" >
+                    
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                </field>                  
+
+                <!-- <field name="show_empty_categories" type="list"
+                    label="COM_JDOWNLOADS_SHOW_EMPTY_CATEGORIES_LABEL"
+                    description="COM_JDOWNLOADS_SHOW_EMPTY_CATEGORIES_DESC" >
+                    
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field> --> 
+                
+                <field name="show_cat_tags" type="list"
+                    label="JGLOBAL_SHOW_TAGS_LABEL"
+                    description="JGLOBAL_SHOW_TAGS_DESC" >
+                    <option value="">COM_JDOWNLOADS_USE_GLOBAL</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field>                    
+                              
+            </fieldset>
+            
+            <fieldset name="advanced" label="JGLOBAL_LIST_LAYOUT_OPTIONS">
+                <field name="settings_notes2" type="jdPureText"
+                       label="COM_JDOWNLOADS_MENU_OPTIONS_DESC" />
+
+                <field name="orderby_pri" type="list"
+                    description="COM_JDOWNLOADS_CATEGORY_ORDER_DESC"
+                    label="COM_JDOWNLOADS_CATEGORY_ORDER_LABEL" >
+                    
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="none">COM_JDOWNLOADS_NO_ORDER</option>
+                    <option value="alpha">COM_JDOWNLOADS_TITLE_ALPHABETICAL</option>
+                    <option value="ralpha">COM_JDOWNLOADS_TITLE_REVERSE_ALPHABETICAL</option>
+                    <option value="order">COM_JDOWNLOADS_CATEGORY_MANAGER_ORDER</option>
+                </field>
+                
+                <field
+                    name="show_tags"
+                    type="list"
+                    label="JGLOBAL_SHOW_TAGS_LABEL"
+                    description="JGLOBAL_SHOW_TAGS_DESC">
+                    <option value="">COM_JDOWNLOADS_USE_GLOBAL</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field>                   
+<!--                <field name="show_sort_order_bar" type="list"
+                    description="COM_JDOWNLOADS_USE_SORT_ORDER_OPTION_DESC"
+                    label="COM_JDOWNLOADS_USE_SORT_ORDER_OPTION_LABEL" >
+                    
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field>
+ -->               
+                <field name="show_pagination" type="list"
+                    description="COM_JDOWNLOADS_PAGINATION_DESC"
+                    label="COM_JDOWNLOADS_PAGINATION_LABEL" >
+                    
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field>
+
+                <field name="show_pagination_results" type="list"
+                    label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+                    description="JGLOBAL_PAGINATION_RESULTS_DESC" >
+
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="0">COM_JDOWNLOADS_HIDE</option>
+                    <option value="1">COM_JDOWNLOADS_SHOW</option>
+                </field>
+            
+                <field name="display_num" type="list"
+                    description="COM_JDOWNLOADS_NUMBER_CATS_LIST_DESC"
+                    label="COM_JDOWNLOADS_NUMBER_CATS_LIST_LABEL" >
+                    <option value="">COM_JDOWNLOADS_USE_CONFIG_SETTINGS</option>
+                    <option value="5">J5</option>
+                    <option value="10">J10</option>
+                    <option value="15">J15</option>
+                    <option value="20">J20</option>
+                    <option value="25">J25</option>
+                    <option value="30">J30</option>
+                    <option value="50">J50</option>
+                    <option value="100">J100</option>
+                    <option value="0">JALL</option>
+                </field>
+            </fieldset>
+
+      </fields> 
+</metadata>

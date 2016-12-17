@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="3.1" method="upgrade">
+	<name>jDownloads Tree</name>
+	<author>Josh Prakash</author>
+	<creationDate>2015-09-17</creationDate>
+	<copyright>Copyright (C) 2008-2010 youthpole.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joshprakash@yahoo.com</authorEmail>
+	<authorUrl>www.youthpole.com</authorUrl>
+	<version>3.2.38</version>
+	<description>MOD_JDOWNLOADS_TREE_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jdownloads_tree">mod_jdownloads_tree.php</filename>
+		<filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>mod_jdownloads_tree.xml</filename>    
+        <folder>tmpl</folder>
+        <folder>language</folder>
+        <folder>fields</folder>
+        <folder>jdtree</folder>
+	</files>
+	<config>
+	    <fields name="params" addfieldpath="/modules/mod_jdownloads_tree/fields"> 
+			<fieldset name="basic">
+				<field name="lengthc" type="text" default="20" label="MOD_JDOWNLOADS_TREE_CAT_MAX_LENGTH" description="MOD_JDOWNLOADS_TREE_CAT_MAX_LENGTH_DESC" />
+				<field name="catoption" type="list" default="1" label="MOD_JDOWNLOADS_TREE_CAT_OPTION" description="MOD_JDOWNLOADS_TREE_CAT_OPTION_DESC">
+					<option value="1">MOD_JDOWNLOADS_TREE_OPTION_INCLUDE</option>
+					<option value="0">MOD_JDOWNLOADS_TREE_OPTION_EXCLUDE</option>
+				</field>
+				<field name="catid" type="jdCategorySelectPure" multiple="true" size="10" default="" label="MOD_JDOWNLOADS_TREE_CAT_IDS" description="MOD_JDOWNLOADS_TREE_CAT_IDS_DESC"/>
+                <field name="maxlevel" type="integer" default="0" label="MOD_JDOWNLOADS_TREE_SELECT_MAX_LEVELS" description="MOD_JDOWNLOADS_TREE_SELECT_MAX_LEVELS_DESC" first="0" last="8" step="1"/>
+                <field name="view_amount_cat_items" type="radio" label="MOD_JDOWNLOADS_TREE_VIEW_AMOUNT_OF_SUBCATS" default="0" description="MOD_JDOWNLOADS_TREE_VIEW_AMOUNT_OF_SUBCATS_DESC">
+                        <option value="1">MOD_JDOWNLOADS_TREE_YES</option>
+                        <option value="0">MOD_JDOWNLOADS_TREE_NO</option>
+                </field>
+                <field name="view_amount_items" type="radio" label="MOD_JDOWNLOADS_TREE_VIEW_AMOUNT_OF_DOWNLOADS" default="0" description="MOD_JDOWNLOADS_TREE_VIEW_AMOUNT_OF_DOWNLOADS_DESC">
+                        <option value="1">MOD_JDOWNLOADS_TREE_YES</option>
+                        <option value="0">MOD_JDOWNLOADS_TREE_NO</option>
+                </field>
+                <field name="view_zero_values" type="radio" label="MOD_JDOWNLOADS_TREE_VIEW_ZERO_VALUES" default="0" description="MOD_JDOWNLOADS_TREE_VIEW_ZERO_VALUES_DESC">
+                        <option value="1">MOD_JDOWNLOADS_TREE_YES</option>
+                        <option value="0">MOD_JDOWNLOADS_TREE_NO</option>
+                </field>
+                <field name="view_tooltip" type="radio" label="MOD_JDOWNLOADS_TREE_VIEW_TOOLTIP" default="0" description="MOD_JDOWNLOADS_TREE_VIEW_TOOLTIP_DESC">
+                        <option value="1">MOD_JDOWNLOADS_TREE_YES</option>
+                        <option value="0">MOD_JDOWNLOADS_TREE_NO</option>
+                </field>
+                <field name="moduleclass_sfx" type="text" default="" label="MOD_JDOWNLOADS_TREE_CLASS_SUFFIX_TITLE" description="MOD_JDOWNLOADS_TREE_CLASS_SUFFIX_DESC"/>
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="cache" type="list" default="1" label="MOD_JDOWNLOADS_TREE_CACHE_LABEL" description="MOD_JDOWNLOADS_TREE_CACHE_DESCRIPTION">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="MOD_JDOWNLOADS_TREE_CACHE_TIME_LABEL" description="MOD_JDOWNLOADS_TREE_CACHE_TIME_DESCRIPTION" />
+			</fieldset>
+		</fields>
+    </config>			
+</extension>

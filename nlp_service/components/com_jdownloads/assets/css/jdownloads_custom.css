@@ -1,0 +1,5 @@
+/* Custom CSS File for jDownloads
+   If this file already exist then jDownloads does not overwrite it when installing or upgrading jDownloads.
+   This file is loaded after the standard jdownloads_fe.css.
+   So you can use it to overwrite the standard css classes for your own customising.
+*/

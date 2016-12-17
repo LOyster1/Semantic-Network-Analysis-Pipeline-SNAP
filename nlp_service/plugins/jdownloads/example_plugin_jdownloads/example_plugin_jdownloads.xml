@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="jdownloads" method="upgrade">
+	<name>jDownloads Example</name>
+        <author>Arno Betz</author>
+        <creationDate>2014-03-28</creationDate>
+        <copyright>Copyright (C) 2014 Arno Betz</copyright>
+        <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+        <authorEmail>info@jdownloads.com</authorEmail>
+        <authorUrl>www.jdownloads.com</authorUrl>
+        <version>3.2</version>
+	<description>Example Plugin to handle events triggered by jDownloads and used by other extensions.</description>
+	<files>
+		<filename plugin="example_plugin_jdownloads">example_plugin_jdownloads.php</filename>
+		<filename>index.html</filename>
+	</files>
+</extension>

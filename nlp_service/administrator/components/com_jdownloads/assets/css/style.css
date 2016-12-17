@@ -1,0 +1,533 @@
+/*  style.css v3-2H  25 July 2014 at 15:26  */
+ /* +++++++Admin Styling for Tool tips+++++++++++++++++++ */
+ /* ++++++++++++++  .tip for v2.5 series  .tooltip-xxx for v3.x series ++++++++++++++ */
+.tooltip-inner, .tip{
+  /* optional styling,  omit for tempate defaults*/
+	border: solid 1px #ccc !important;
+	background: #ededed !important;
+	color:#000333 !important;
+}
+.tooltip.in, .tip-wrap{
+  /* required to overcome opacity with tempate defaults*/
+  opacity: 1 !important;
+  filter: alpha(opacity=100) !important;
+}
+.tip-title {
+  /* turn off arrow in 2-5 series as it is misleading on right hand side tooltips*/
+background-image:url('') !important;
+}
+/* user group check boxes */
+#group-form li {
+    clear: both !important;
+}
+#group-form  label {
+    min-width: 13em !important;
+    float: left !important;
+}
+#group-form select {
+    width: auto !important;
+}
+/* icons */
+.icon-48-jdlogo {
+	background-image: url(../../assets/images/jd_logo_48.png);	
+}
+.icon-48-jdlicenses {
+    background-image: url(../../assets/images/licenses48.png);    
+}
+.icon-48-jdcategories {
+    background-image: url(../../assets/images/categories48.png);    
+}
+.icon-48-jddownloads {
+    background-image: url(../../assets/images/downloads48.png);    
+}
+
+.icon-48-jdfiles {
+    background-image: url(../../assets/images/files48.png);    
+}
+
+.icon-48-jdlogs {
+    background-image: url(../../assets/images/logs48.png);    
+}
+
+.icon-48-jdlayouts {
+    background-image: url(../../assets/images/layouts48.png);    
+}
+
+.icon-48-jdtools {
+    background-image: url(../../assets/images/tools48.png);    
+}
+
+.icon-48-jdconfig    { 
+        background-image: url(../../assets/images/config48.png); 
+} 
+
+.icon-48-jdrestore    { 
+        background-image: url(../../assets/images/restore48.png); 
+}
+
+.icon-48-jdinfo    { 
+        background-image: url(../../assets/images/info48.png); 
+}
+
+.icon-48-jdcss    { 
+        background-image: url(../../assets/images/ttf.png); 
+}
+
+.icon-48-jdupload    { 
+        background-image: url(../../assets/images/upload.png); 
+}   
+
+.icon-48-jdgroups    { 
+        background-image: url(../../assets/images/groups48.png); 
+} 
+
+.icon-48-layouts {
+    background-image: url(../../assets/images/layouts48.png);    
+}
+
+.icon-48-jdbackup {
+    background-image: url(../../assets/images/backup48.png);    
+}
+
+.icon-48-langmanager {
+    background-image: url(../../assets/images/langmanager.png);    
+}
+
+.icon-32-jdtools {
+    background-image: url(../../assets/images/tools32.png);    
+}
+
+.icon-32-jdlogs {
+    background-image: url(../../assets/images/cancel32.png);    
+}
+
+.icon-32-jdconfig    { 
+        background-image: url(../../assets/images/config32.png); 
+} 
+
+.icon-32-template    { 
+        background-image: url(../../assets/images/layouts32.png); 
+}
+
+.icon-32-upload32    { 
+        background-image: url(../../assets/images/upload32.png); 
+}
+
+.icon-32-files32    { 
+        background-image: url(../../assets/images/files32.png); 
+}
+
+.icon-32-downloads32    { 
+        background-image: url(../../assets/images/downloads32.png); 
+}
+
+.icon-32-groups    { 
+        background-image: url(../../assets/images/groups32.png); 
+}
+
+.icon-32-reset    { 
+        background-image: url(../../assets/images/reset32.png); 
+}
+
+.adminheading {
+	background: #F0F0F0;
+	padding-left: 0px;
+	padding: 0px;
+	/*color: #993300;*/
+	/*font: 108%;*/
+}
+
+/*  table items*/
+table.adminlist td, table.adminlist th {
+    font-size: 0.98em !important;
+    padding: 4px;
+}
+table.jdadminpanel {
+	background-color: #FFF;
+	font-family : Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+	width: 100%;
+	border-collapse: collapse;
+	color: #333333;
+	font-size: 100%; 
+	text-align: left;
+}
+table.jdadminpanel th {
+	background: #f4f4f4;
+	text-align: left;
+	width: 100%;
+	padding: 5px;
+}
+
+table.jdadminpanel td {
+	background: #FFF;
+	text-align: left;
+	width: 99%;
+	padding: 5px 5px;
+}
+
+div.jdlists-header-info {
+    padding: 5px;
+    margin-top: 5px;
+    text-align: left;
+    color:#333333;
+    background-color: #ffffe0;
+    width: 100%;
+}
+
+div.jdlists-header-info-right {
+    padding: 10px;
+    text-align: right;
+    color:#333333;
+    background-color: #ffffe0;
+    width: 100%;
+}
+
+div.jdwarning {
+    padding: 15px 70px;
+    text-align: left;
+    color:#333333;
+    background-color: #ffffe0;
+    background-position: left top;
+    background-image: url(../../assets/images/warning.png);
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+div.infotext {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size :110%;
+    color:#333333;
+	padding: 10px;
+    text-align: left;
+}
+
+input.button_rename {
+    background-image: url(../../assets/images/rename.png) !important; 
+    background-color: transparent; /* make the button transparent */
+    background-repeat: no-repeat;  /* make the background image appear only once */
+    background-position: 0px 0px;  /* equivalent to 'top left' */
+    border: none;           /* assuming we don't want any borders */
+    cursor: pointer;        /* make the cursor like hovering over an <a> element */
+    height: 18px;           /* make this the size of your image */
+    /*padding-left: 18px;     /* make text start to the right of the image */
+    vertical-align: middle; /* align the text vertically centered */
+}
+
+.jd-cpanel-left {
+    float: left;
+    width: 50%;
+}
+
+.jd-cpanel-right {
+    float: right;
+    width: 50%;
+}
+
+.jd-icon {
+    float: left;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+.jd-icon-inside.thumbnail {
+    background: none repeat scroll 0 0 #FDFDFD;
+    border-radius: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.thumbnail img{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+table.adminlist td, table.adminlist th {
+    font-size: 0.98em !important;
+    padding: 4px;
+}
+
+/*****************************************
+ * pane TABS and sliders
+ * only requires for 'isis' compatibility
+ * (flex) 
+ *****************************************/
+
+.pane-sliders .panel {
+	border: 1px solid #CCCCCC;
+	margin-bottom: 3px;
+}
+.pane-sliders .panel h3 {
+	background: none repeat scroll 0 0 #FAFAFA;
+	color: #666666;
+}
+.pane-sliders .title {
+	color: #666666;
+	cursor: pointer;
+	margin: 0;
+	padding: 2px 2px 2px 5px;
+}
+.pane-sliders .content {
+	background-color: white !important;
+}
+.pane-toggler-down a:hover, .pane-toggler-down a:focus,
+.pane-toggler a:hover, .pane-toggler a:focus {
+	text-decoration: none !important;
+}
+.pane-toggler span {
+	background: url("../../assets/images/jd_arrow_down.png") no-repeat scroll 0px 0px transparent;
+	padding-left: 20px;
+	font-size: 14px;
+}
+.pane-toggler-down {
+	border-bottom: 1px solid #CCCCCC;
+}
+.pane-toggler-down span {
+	background: url("../../assets/images/jd_arrow_down.png") no-repeat scroll 0px 0px transparent;
+	padding-left: 20px;
+	font-size: 14px;
+}
+
+/******************************************
+ * joomla TABS *
+ * only requires for 'isis' compatibility
+ * (flex) 
+ *****************************************/
+
+dl.tabs {
+	float: left;
+	margin: 10px 0 -1px;
+	z-index: 50;
+}
+dl.tabs dt {
+	background: none repeat scroll 0 0 #E9E9E9;
+	border: 1px solid #CCCCCC;
+	color: #666666;
+	float: left;
+	margin-left: 3px;
+	padding: 4px 10px;
+}
+dl.tabs dt h3 {
+	font-size: 11px !important;
+	margin: 0px !important;
+	line-height: 20px;
+}
+dl.tabs dt.open {
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-bottom: 1px solid #F9F9F9;
+	color: #000000;
+	z-index: 100;
+}
+div.current {
+	border: 1px solid #CCCCCC;
+	clear: both;
+	padding: 10px;
+}
+div.current dd {
+	margin: 0;
+	padding: 0;
+}
+dl#content-pane.tabs {
+	margin: 1px 0 0;
+}
+
+/******************************************
+ * Corrections for edit forms
+ * only requires for 'isis' compatibility
+ * (flex) 
+ *****************************************/
+
+div.width-60 {
+    width: 59% !important;
+}
+
+div.width-40 {
+    width: 40% !important;
+	margin-top: 36px;
+}
+
+div.width-100 {
+    width: 100% !important;
+}
+
+.fltlft {
+    float: left;
+}
+
+.fltrt {
+    float: right;
+}
+.jdfltlft {
+    float: left;
+}
+
+.jdfltrt {
+    float: right;
+}
+
+.clr {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}
+.jdclr {
+    clear: both;
+    height: 5px;
+    overflow: hidden;
+	width: 100%;
+}
+
+.jd-input {
+	width: auto;
+}
+/* ---- input button --for tools in Hathor --------- */
+
+input.button {
+	margin-bottom:4px;
+}
+/* input buttons etc */
+input#filter_search {
+	margin-bottom: 4px;
+	margin-top: 4px;
+	width: 150px;
+	height: 12px;
+	line-height: 12px;
+	font-size: 11px;
+}
+/* cotrols width of order field in downloads view*/
+input.text-area-order {
+	width: 3em;
+	text-align: center;
+}
+
+/* ----Field set stuff needed for Isis --- */
+
+#jdfilter-bar {
+	height: auto;
+	margin-bottom: 5px;
+}
+fieldset#filter-bar {
+	margin: 0;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	width: 98%;
+}
+fieldset#filter-bar ol,
+fieldset#filter-bar ul {
+	list-style: none;
+	margin: 0;
+	padding: 5px 0 0;
+}
+fieldset#filter-bar ol li,
+fieldset#filter-bar ul li {
+	float: left;
+	padding: 0 5px 0 0;
+}
+fieldset#filter-bar ol li fieldset,
+fieldset#filter-bar ul li fieldset {
+	margin: 0;
+	padding: 0;
+}
+fieldset#filter-bar .filter-search {
+	float: left;
+	padding-bottom: 3px;
+}
+fieldset#filter-bar .filter_search {
+	float: left;
+	padding-bottom: 3px;
+}
+fieldset#filter-bar .filter-select {
+	float: right;
+}
+fieldset#filter-bar input#search {
+	width: 10em;
+}
+fieldset#filter-bar input#filter-search {
+	width: 10em;
+	padding: 0px;
+}
+label.jdfilter-search-lbl  {
+         margin-top: 24px;
+         color: #0000ff !important;
+	float: left;
+}
+fieldset#filter-bar {
+    height: 60px !important;
+}
+
+/***********************
+ * Other fixes for isis
+ **********************/
+
+ul.adminformlist {
+	/*list-style-position: outside !important;*/
+	list-style-type: none !important;
+	margin: 0px !important;
+	padding: 5px !important;
+}
+
+div fieldset.panelform {
+	padding: 0px !important;
+	margin: 5px !important;
+}
+
+/* set background color */
+table.adminlist tbody tr.row0 td, table.adminlist tbody tr.row0 th {
+    background-color: #F9F9F9;
+    background-image: linear-gradient(to bottom, #F9F9F9, #F9F9F9);
+    background-repeat: repeat-x;
+	/*vertical-align: top;*/
+}
+
+/* order align */
+table.adminlist td.order{
+	text-align: right;
+}
+
+/* fix for 'files' list */
+#editcell table{
+	width: 100%;
+}
+
+/* fixes for 'batch' process */
+fieldset.batch{
+ /*   max-height: 400px;
+    overflow-y: auto; */
+    padding: 15px;
+    position: relative;
+}
+
+fieldset.batch label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    width: 100%;
+    float: none !important;
+}
+
+fieldset.batch legend {
+    margin-bottom: 0px;
+}
+
+/* fix for pagination fix in isis */
+table.adminlist .pagination {
+	display: inline-block;
+	margin: 0 auto;
+	padding: 0;
+}
+/*  layout corrections to keep text areas and image width to correct size
+  also make sure any <code> will wrap normally 
+  Note that img confined to left side by width-60 dependancy  */
+.width-60 ul.adminformlist img,
+fieldset.uploadform textarea,
+fieldset.panelform textarea,
+fieldset.adminform textarea {
+    box-sizing: border-box;
+    width: 100% !important;
+}
+ul.adminformlist code {
+   white-space: normal;
+   color:#ff0000;
+}

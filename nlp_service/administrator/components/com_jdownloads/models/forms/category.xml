@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<!--
+		$Id: category.xml - edit category
+	-->
+<form>
+
+    <!-- <fieldset addfieldpath="/administrator/components/com_jdownloads/models/fields">    </fieldset> -->
+
+		<field name="id" 
+            type="text" 
+            default="0" 
+            label="COM_JDOWNLOADS_ID"
+			readonly="true" 
+            class="readonly"
+			description="COM_JDOWNLOADS_ID_DESC"/>
+
+		<field name="title" 
+            type="text" 
+            class="inputbox"
+			size="50" 
+            label="COM_JDOWNLOADS_TITLE"
+			description="COM_JDOWNLOADS_EDIT_CAT_TITLE_DESC" 
+            required="true" />
+            
+        <field name="alias" 
+            type="text" 
+            class="inputbox"
+            size="40" 
+            label="COM_JDOWNLOADS_ALIAS"
+            description="COM_JDOWNLOADS_FIELD_ALIAS_DESC" />
+            
+		<field name="cat_dir_parent"
+            type="jdCategoryCategoryPath" 
+            class="readonly" 
+			size="40" 
+            label="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE" 
+            readonly="true" 
+			description="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE_MSG" />
+
+        <field name="cat_dir"
+            type="text"
+            class="input" 
+            size="40"
+            label="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE"
+            required="true" 
+            description="COM_JDOWNLOADS_EDIT_CAT_DIR_TITLE_DESC2" />
+
+        <field name="parent_id"
+            type="jdcategoryparent"
+            label="COM_JDOWNLOADS_EDIT_CAT_PARENT_LABEL"
+            description="COM_JDOWNLOADS_EDIT_CAT_PARENT_DESK"
+            class="inputbox"/>
+            
+        <field
+            name="access"
+            type="accesslevel"
+            label="COM_JDOWNLOADS_ACCESS"
+            description="COM_JDOWNLOADS_ACCESS_DESC"
+            class="inputbox"/>
+            
+        <field
+            name="accessload"
+            type="accesslevel"
+            multiple="true"
+            label="COM_JDOWNLOADS_ACCESS_DOWNLOAD"
+            description="COM_JDOWNLOADS_ACCESS_DOWNLOAD_DESC"
+            class="inputbox"/>
+            
+        <field
+            name="accessedit"
+            type="accesslevel"
+            multiple="true"
+            label="COM_JDOWNLOADS_ACCESS_EDIT"
+            description="COM_JDOWNLOADS_ACCESS_EDIT_DESC"
+            class="inputbox"/>
+            
+        <field
+            name="accessdelete"
+            type="accesslevel"
+            multiple="true"
+            label="COM_JDOWNLOADS_ACCESS_DELETE"
+            description="COM_JDOWNLOADS_ACCESS_DELETE_DESC"
+            class="inputbox"/>
+            
+        <field
+            name="accessupload"
+            type="accesslevel"
+            multiple="true"
+            label="COM_JDOWNLOADS_ACCESS_UPLOAD"
+            description="COM_JDOWNLOADS_ACCESS_UPLOAD_DESC"
+            class="inputbox"/>
+
+        <field 
+            name="tags"
+            type="tag"
+            label="JTAG"
+            description="JTAG_DESC"
+            class="inputbox"
+            multiple="true"/>              
+            
+        <field name="description"
+            type="editor" 
+            buttons="true" 
+            hide="pagebreak,readmore"
+			class="inputbox"
+			filter="safehtml"
+			label="COM_JDOWNLOADS_DESCRIPTION" 
+            description="" />
+            
+        <field name="published"
+            type="list"
+            label="JSTATUS"
+            description="COM_JDOWNLOADS_FIELD_STATE_DESC"
+            class="inputbox"
+            size="1"
+            default="1">
+            <option
+                value="1">COM_JDOWNLOADS_PUBLISHED</option>
+            <option
+                value="0">COM_JDOWNLOADS_UNPUBLISHED</option>
+        </field>
+
+        <field name="language"
+            type="contentlanguage"
+            label="COM_JDOWNLOADS_LANGUAGE"
+            description="COM_JDOWNLOADS_LANGUAGE_DESC"
+            class="inputbox">
+            <option value="*">COM_JDOWNLOADS_ALL</option>
+        </field>
+       
+        <field name="ordering"
+            type="Ordering" 
+            class="inputbox"
+            label="JFIELD_ORDERING_LABEL"
+            description="JFIELD_ORDERING_DESC" />
+            
+        <field name="rules" type="rules" label=""
+            translate_label="false" class="inputbox" filter="rules"
+            component="com_jdownloads" section="category" validate="rules" />                        
+       
+       <field name="buttonspacer"
+            description="JGLOBAL_ACTION_PERMISSIONS_DESCRIPTION"
+            type="spacer" />
+        
+        <field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+        <field name="level" type="hidden" filter="unset"/>
+        <field name="lft" type="hidden" filter="unset"/>
+        <field name="rgt" type="hidden" filter="unset"/>
+        <field name="asset_id" type="hidden" filter="unset" />
+            
+        <field
+            name="metadesc"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_DESCRIPTION_LABEL"
+            description="COM_JDOWNLOADS_META_DESCRIPTION_DESC"
+            rows="3"
+            cols="30"/>
+
+        <field
+            name="metakey"
+            type="textarea"
+            label="COM_JDOWNLOADS_META_KEYWORDS_LABEL"
+            description="COM_JDOWNLOADS_META_KEYWORDS_DESC"
+            rows="3"
+            cols="30"/>
+
+        <field
+            name="created_user_id"
+            type="user"
+            label="COM_JDOWNLOADS_CREATED_BY"
+            desc=""
+            />
+
+        <field
+            name="created_time"
+            type="text"
+            label="COM_JDOWNLOADS_CREATED_DATE"
+            class="readonly"
+            filter="unset"
+            readonly="true" />
+
+        <field
+            name="modified_user_id"
+            type="user"
+            label="COM_JDOWNLOADS_MODIFIED_BY"
+            class="readonly"
+            readonly="true"
+            filter="unset"/>
+
+        <field
+            name="modified_time"
+            type="text"
+            label="COM_JDOWNLOADS_MODIFIED_DATE"
+            class="readonly"
+            filter="unset"
+            readonly="true" /> 
+            
+        <field
+            name="views"
+            type="text"
+            label="COM_JDOWNLOADS_VIEWS"
+            class="readonly"
+            filter="unset"
+            readonly="true" /> 
+            
+        <field name="password"
+            type="text"
+            class="input" 
+            size="30"
+            label="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_LABEL"
+            required="false" 
+            description="COM_JDOWNLOADS_EDIT_CAT_PASSWORD_DESC" />
+        
+        
+        <field name="pic"
+            type="jdcaticon" 
+            default="" 
+            label="COM_JDOWNLOADS_CATSLIST_PIC" 
+            description="COM_JDOWNLOADS_PIC_DESC" />
+                    
+        <field name="picnew" 
+            type="file" 
+            label="COM_JDOWNLOADS_PIC_NEW"
+            size="30"
+            description="COM_JDOWNLOADS_PIC_NEW_DESC" />        
+        
+        <field name="notes"
+                type="textarea" 
+                rows="3"
+                cols="30" 
+                class="inputbox"
+                filter="safehtml"
+                label="COM_JDOWNLOADS_INTERNAL_NOTE_LABEL" 
+                description="" />
+                
+        <field name="robots"
+            type="list"
+            label="JFIELD_METADATA_ROBOTS_LABEL"
+            description="JFIELD_METADATA_ROBOTS_DESC"
+            >
+            <option value="">JGLOBAL_USE_GLOBAL</option>
+            <option value="index, follow">JGLOBAL_INDEX_FOLLOW</option>
+            <option value="noindex, follow">JGLOBAL_NOINDEX_FOLLOW</option>
+            <option value="index, nofollow">JGLOBAL_INDEX_NOFOLLOW</option>
+            <option value="noindex, nofollow">JGLOBAL_NOINDEX_NOFOLLOW</option>
+        </field>  
+
+
+        <field
+            label="" 
+            name="spacer"
+            description=""
+            hr="true"
+            type="spacer" />                
+  
+</form>
