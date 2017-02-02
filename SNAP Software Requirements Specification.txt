@@ -20,8 +20,9 @@ A. Natural Language Processing (NLP)
 (iii)	Lemmatization of tokens so that single words in their multiple forms (better, well, etc. change to good) can not be misconstrued as different individual words.
 (iv)	Categorization of tokens as parts of speech (POS) so further meaning can be derived from the specific combinations of nouns, verbs, adjectives, etc.
 (v)	Performing name entity recognition (NER) so that succinct concepts are not misconstrued as multiple concepts. For example “United States of America” would be recognized at one word and not four separate words.
-(vi)	Import of raw text file.
-(vii)	Export resulting text file of analyzed text, file type .txt.
+(vi) Perform Sentence Splitting.
+(vii)	Import of raw text file.
+(viii)	Export resulting text file of analyzed text, file type .txt.
 Assumptions for NLP:
 (i)	Imported raw text files contain only standard ASCII characters.
 (ii)	All words are real words in imported text files.
