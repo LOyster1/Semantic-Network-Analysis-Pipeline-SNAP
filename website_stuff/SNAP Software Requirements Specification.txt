@@ -1,0 +1,96 @@
+Semantic Networks Analysis Pipeline
+Software Requirements Specification
+
+Levi Oyster and Eric Pak
+University of Alaska Anchorage
+January 31st, 2017
+
+Objectives and Background
+ The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks.
+Natural Language Processing: Perform natural language processing on raw text documents to get succinct objective interpretation of content.
+Undirected Graph Network Generation:Generate networks of works from processed documents using an undirected graph data structure.
+Network Analysis: Combine all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on results in 2D space.
+3-D Visualization of Semantic Network: Using the time stamps of the documents, extrapolate the 2D representation of the network into 3D space.
+Website for Hosting Components:Combine A through D into one complete website that can be accessed by users.
+
+Breakdown of Components
+A. Natural Language Processing (NLP)
+(i)	Tokenization of words within a text document, file type .txt,  so that they can be individually Stemmed, Lemmatized, checked as Parts of Speech, and checked for Name Entity Recognition.
+(ii)	Stemming of tokens so that single words in their multiple forms (works, working, worked etc. change to work) can not be misconstrued as different individual words.
+(iii)	Lemmatization of tokens so that single words in their multiple forms (better, well, etc. change to good) can not be misconstrued as different individual words.
+(iv)	Categorization of tokens as parts of speech (POS) so further meaning can be derived from the specific combinations of nouns, verbs, adjectives, etc.
+(v)	Performing name entity recognition (NER) so that succinct concepts are not misconstrued as multiple concepts. For example “United States of America” would be recognized at one word and not four separate words.
+(vi)	Import of raw text file.
+(vii)	Export resulting text file of analyzed text, file type .txt.
+Assumptions for NLP:
+(i)	Imported raw text files contain only standard ASCII characters.
+(ii)	All words are real words in imported text files.
+(iii)	Files contain correct sentence structures and syntax.
+(iv)	Imported raw .txt files are properly dated in file name for use as timestamp.
+
+B. Undirected Graph Network Generation (UGNG)
+(i)	Import of analyzed text file, file type .txt.
+(ii)	Using a sliding window, connect nodes (individual words) with edges based on the closeness of words within a sentence.
+(iii)	Using a sliding window, connect multiple nodes with edges spanning multiple sentences.
+(iv)	Using a sliding window, connect multiple nodes with edges spanning multiple paragraphs.
+(v)	Stop word removal.
+(vi)	Export resulting undirected graph file, file type .dl.
+Assumptions for UGNG:
+(i)	Imported .txt files were converted properly from raw text to processed text by NLP.
+(ii)	Imported .txt files are properly dated in file name for use as timestamp.
+
+
+C. Network Analysis
+(i)	Import of all timestamped undirected graph files of dataset, file type .dl.
+(ii)	Perform metrics for node degree, betweenness centrality, closeness centrality, and eigenvector centrality on graph and resize nodes based on one of these measures.
+(iii)	Perform modularity measures and then perform a layout that partitions communities into succinct circles of nodes of the same modularity class so all communities can be seen as separate entities.
+(iv)	Export resulting datafile and 2D visualization of analyzed graph, file type .gexf and .pdf.
+Assumptions for Network Analysis:
+(i)	Imported .dl files reflect proper graph data structure.
+(ii)	Imported .dl files are properly dated in file name for use as timestamp.
+(iii) 	Stop words were properly removed so that they do not skew meaning of network.
+
+
+D. 3-D Visualization of Semantic Network (VSN)
+(i)	Import datafile of analyzed graph, file type .gexf, .txt file of timestamps.
+(ii)	Using each time stamp of original text files, make each time stamp a separate network layer in 3D space.
+(iii)	Generate colored meshes connecting communities of each layer through time, these will be called “noodles” for the remainder of this document.
+(iv)	Noodles will be connected through time if they meet specified time threshold.
+(v)	Export resulting data files of 3D visualization, file type node, edge, and mesh .speck, .cmap, .cf.
+
+Assumptions of VSN:
+(i)	Imported .gexf file is properly formatted for use.
+(ii)	Imported .txt file of timestamps reflect timestamps of original raw .txt files.
+
+E. Website for Hosting Components
+a.	User Management
+(i)	User registration page.
+(ii)	User login page and log out button.
+(iii)	User forgot-password page.
+
+b.	Natural Language Processing Page
+(i)	Natural Language Processing page will have file upload for users to load their raw text files. 
+(ii)	Natural Language Processing page will allow user to choose different options for processing: tokenization, stemming, lemmatization, parts of speech, and natural language processing.
+(iii)	User will click a button to process files and their resulting processed text files will appear on the Undirected Graph Network Generation page.
+(iv)	Processed .txt files will be downloadable on Natural Language Processing page.
+
+c. 	Undirected Graph Network Generation Page
+(i)	Undirected Graph Network Generation page will allow user to choose processed text files processed by the Natural Language Processing page and then click a button to generate an Undirected Graph Network for each text file selected.
+(ii)	Resulting .dl files will be transferred to appear on the Network Analysis page.
+(iii)	Undirected Graph Network Generation page will allow user to download resulting .dl files.
+Assumptions for UGNG Page:
+(i)	NLP processed .txt files properly transferred for use in UGNG page.
+
+d.	Network Analysis Page
+(i)	Network Analysis Page will allow a user to select individual .dl files (or all files at once will be selected) and click a button that will perform Network Analysis on all selected files.
+(ii)	The resulting .gexf from the sum of graphs will be transferred to appear on the 3-D Visualization of Semantic Network for use.
+(iii) 	Processed .gexf and .pdf files will be downloadable from the Network Analysis page.
+Assumptions for Network Analysis Page:
+(i)	UGNG processed .dl files properly transferred for use in Network Analysis page.
+
+e.	3-D Visualization of Semantic Network Page
+(i)	3-D Visualization of Semantic Network Page will allow a user to select individual .gexf files and click a button that will generate .speck files  for 3-D visualization.
+(ii)	Processed .speck files will be downloadable from the 3-D Visualization of Semantic Network Page.
+Assumptions for VSN Page:
+(i)	Network Analysis processed .gexf files properly transferred for use in VSN page.
+
