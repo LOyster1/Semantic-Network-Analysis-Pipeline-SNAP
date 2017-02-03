@@ -1,9 +1,28 @@
 Semantic Networks Analysis Pipeline
 Software Requirements Specification
+Document Version: 01/31/2017 v0.0
 
 Levi Oyster and Eric Pak
 University of Alaska Anchorage
 January 31st, 2017
+
+Project Agreement and statement of work
+This project agreement and statement of work (hereinafter "Agreement") binds the client and service provider into an agreement of services which has been outlined in this document. Both the client and service provider (hereinafter "parties") agree that the terms outlined in this document are to be completed and any additional services are considered out of scope.
+
+
+The "Client" is:
+	Martin Cenek
+	Professor
+	University of Alaska Anchorage
+	Anchorage, AK, 99501
+	email: mcenek@alaska.edu
+
+The "Service Provider" is:
+	Levi Oyster
+	email: loyster@alaska.edu
+
+	Eric Pak
+	email: epak3@alaska.edu
 
 Objectives and Background
  The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks.
@@ -12,6 +31,20 @@ Undirected Graph Network Generation:Generate networks of works from processed do
 Network Analysis: Combine all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on results in 2D space.
 3-D Visualization of Semantic Network: Using the time stamps of the documents, extrapolate the 2D representation of the network into 3D space.
 Website for Hosting Components:Combine A through D into one complete website that can be accessed by users.
+
+Legal Stuff here:
+Statement of work, escrow, project work product, performance, duration of services, change control, intellectual property, licensing conditions,termination conditions...
+
+______________________________		______________________
+Client: Martin Cenek				        Date
+
+
+______________________________		______________________
+Service Provider: Levi Oyster		 Date
+
+
+______________________________		______________________
+Service Provider: Eric Pak			   Date
 
 Breakdown of Components
 A. Natural Language Processing (NLP)
