@@ -10,8 +10,8 @@ This is the Software Requirements and Specifications document for the Semantic N
 This document will include sections on:
 
 	1. Project Agreement and Statement of Work
-	2. Assumptions
-	3. Objectives
+	2. Project Description
+	3. Assumptions
 	4. Purpose
 	5. Breakdown of Components
 	6. Technologies Used and Reference
@@ -34,6 +34,21 @@ The "Service Provider" is:
 	Eric Pak
 	Email: epak3@alaska.edu
 
+The Project is:
+
+Project Description
+The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks. The Semantic Networks Analysis Pipeline is broken down into four main pieces that are accessed through a website for ease of use. Below is a quick description of the four pieces of the pipeline and the website.
+
+	A. Natural Language Processing: The Natural Language Processing (NLP) of the pipeline Performs natural language processing on raw text documents to get succinct objective interpretation of content.
+
+	B. Undirected Graph Network Generation: The undirected Graph Network Generation Generates networks of words from processed documents using an undirected graph data structure. During the process of creating the graph data structure stop words will be removed and name entities will be combined as a single token. 
+
+	C. Network Analysis: The Network Analysis Combines all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on results in 2D space.
+
+	D. 3-D Visualization of Semantic Network: The Visualization of Semantic Network (VSN) uses the data file from the network analysis along with the time stamps of the documents to extrapolate the 2D representation of the network into 3D space. The VSN will produce files that can be opened in partiview to visualize the data from the pipeline in 3D.
+
+	E. Website for Hosting Components: Combine A through D into one complete website that can be accessed by users.
+
 Assumptions
 	(i)	Website will be hosted on MAMP 3.5.
 	(ii)	Website is built from PHP 7.0.8
@@ -43,19 +58,7 @@ Assumptions
 	(vi)	Undirected Graph Network Generation uses Java.
 	(vii)	Network Analysis uses Java in conjunction with Gephi 0.8.2 developer toolkit and Gephi's Circular Layout plugin. Gephi API can be found at https://gephi.org/docs/api/
 	(viii)	Network Visualization uses Java in conjunction with Partiview 0.91. 	Partiview can be found at http://virdir.ncsa.illinois.edu/partiview/
-
-Objectives
-The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks.
-
-	A. Natural Language Processing: Perform natural language processing on raw text documents to get succinct objective interpretation of content.
-
-	B. Undirected Graph Network Generation: Generate networks of words from processed documents using an undirected graph data structure.
-
-	C. Network Analysis: Combine all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on results in 2D space.
-
-	D. 3-D Visualization of Semantic Network: Using the time stamps of the documents, extrapolate the 2D representation of the network into 3D space.
-
-	E. Website for Hosting Components: Combine A through D into one complete website that can be accessed by users.
+	(ix)	Server is run on a mac computer
 
 Purpose
 
