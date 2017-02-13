@@ -3,7 +3,7 @@ Software Requirements Specification
 
 Levi Oyster and Eric Pak
 University of Alaska Anchorage
-January 31st, 2017
+February 12th, 2017
 
 Introduction
 This is the Software Requirements and Specifications document for the Semantic Networks Analysis Pipeline. This document will go over the proposed software and functionality of the software.
@@ -35,19 +35,20 @@ The "Service Provider" is:
 	Email: epak3@alaska.edu
 
 The Project is:
-
 Project Description
-The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks. The Semantic Networks Analysis Pipeline is broken down into four main pieces that are accessed through a website for ease of use. Below is a quick description of the four pieces of the pipeline and the website.
+The Semantic Networks Analysis Pipeline (SNAP) is intended to allow a user to perform semantic networks processing on many time stamped text documents of a given subject and generate a 3D representation of the resulting networks. The Semantic Networks Analysis Pipeline is broken down into four main pieces that are accessed through a website for ease of use. Below is a quick description of the four pieces of the pipeline and the website.  See Figure 1-Structural Layout of Pipeline for structural reference of connected components.
 
-	A. Natural Language Processing: The Natural Language Processing (NLP) of the pipeline Performs natural language processing on raw text documents to get succinct objective interpretation of content.
+	A. Natural Language Processing: The Natural Language Processing (NLP) of the pipeline uses various NLP toolkits on raw text documents to get succinct objective interpretation of content.
 
-	B. Undirected Graph Network Generation: The undirected Graph Network Generation Generates networks of words from processed documents using an undirected graph data structure. During the process of creating the graph data structure stop words will be removed and name entities will be combined as a single token. 
+	B. Undirected Graph Network Generation: The Undirected Graph Network Generation generates networks of words from processed documents using an undirected graph data structure. During the process of creating the graph data structure stop words will be removed and name entities will be combined as single tokens. 
 
-	C. Network Analysis: The Network Analysis Combines all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on results in 2D space.
+	C. Network Analysis: The Network Analysis combines all generated graphs and perform multiple network analysis metric techniques on the resulting undirected graph data structure and perform layouts based on the results in 2D visualized space.
 
-	D. 3-D Visualization of Semantic Network: The Visualization of Semantic Network (VSN) uses the data file from the network analysis along with the time stamps of the documents to extrapolate the 2D representation of the network into 3D space. The VSN will produce files that can be opened in partiview to visualize the data from the pipeline in 3D.
+	D. 3-D Visualization of Semantic Network: The Visualization of Semantic Network (VSN) uses the data file from the network analysis along with the time stamps of the documents to extrapolate the 2D representation of the network into 3D space. The VSN will produce files that can be opened in Partiview to visualize the data from the pipeline in 3D space.
 
 	E. Website for Hosting Components: Combine A through D into one complete website that can be accessed by users.
+
+Figure 1-Structural Layout of Pipeline
 
 Assumptions
 	(i)	Website will be hosted on MAMP 3.5.
@@ -58,11 +59,11 @@ Assumptions
 	(vi)	Undirected Graph Network Generation uses Java.
 	(vii)	Network Analysis uses Java in conjunction with Gephi 0.8.2 developer toolkit and Gephi's Circular Layout plugin. Gephi API can be found at https://gephi.org/docs/api/
 	(viii)	Network Visualization uses Java in conjunction with Partiview 0.91. 	Partiview can be found at http://virdir.ncsa.illinois.edu/partiview/
-	(ix)	Server is run on a mac computer
+	(ix)	Server is run on a iMac
 
 Purpose
 
-	The purpose for this software is to be able to visualize data and find patterns that would be otherwise difficult to find. Rendering the documents as nodes in a 3D environment will assit the user in finding patterns and correlations in the data gathered from the documents.
+	The purpose for this software is to be able to visualize data and find patterns that would be otherwise difficult to find. Rendering the documents as nodes in a 3D environment will assist the user in finding patterns and correlations in the data gathered from the documents.
 
 Breakdown of Components
 	A. Natural Language Processing (NLP)
@@ -84,42 +85,42 @@ Breakdown of Components
 	Component uses Java
 		(i)	Import of analyzed text file, file type .txt.
 		(ii)	Using a sliding window, connect nodes (individual words) with edges based on the closeness of words within a sentence.
-		(iii)	Using a sliding window, connect multiple nodes with edges spanning multiple sentences.
-		(iv)	Using a sliding window, connect multiple nodes with edges spanning multiple paragraphs.
-		(v)	Stop word removal.
-		(vi)	Export resulting undirected graph file as file type .dl.
-		(vii)	Make available the option to arrange the documents contents by the inverse frequency of the amount of times a word is used in the document. For example if the word “fish” is used ‘n’ number of times the fish node would be placed in order by its frequency.
-		(viii)	Using the frequency layout of the document, be able to omit the nodes with either too high or too low of a frequency and let the user determine the range.
-		(ix)	Using a sliding window, connect multiple nodes using the frequency layout.
-		(x)	Imported .txt files were converted properly from raw text to processed text by NLP.
-		(xi)	Imported .txt files are properly dated in file name for use as 	timestamp.
-		(xii)	Error messages are thrown for exceptions.
+		(iii)	Export resulting undirected graph file as file type .dl.
+		(iv)	Make available the option to arrange the documents contents by the inverse frequency of the amount of times a word is used in the document. For example if the word “fish” is used ‘n’ number of times the fish node would be placed in order by its frequency.
+		(v)	Using the frequency layout of the document, be able to omit the nodes with either too high or too low of a frequency and let the user determine the range.
+		(vi)	Using a sliding window, connect multiple nodes using the frequency layout.
+		(vii)	Imported .txt files were converted properly from raw text to processed text by NLP.
+		(viii)	Imported .txt files are properly dated in file name for use as 	timestamp.
+		(ix)	Error messages are thrown for exceptions.
 
 	C. Network Analysis
 	Component uses Java in conjunction with Gephi 0.8.2 developer tool kit and Gephi Circular layout plugin.
-		(i)	Import of all timestamped undirected graph files of dataset, file type .dl.
-		(ii)	Perform metrics for node degree, betweenness centrality, closeness centrality, and eigenvector centrality on graph and resize nodes based on one of these measures.
-		(iii)	Perform modularity measures and then perform a layout that partitions communities into succinct circles of nodes of the same modularity class so all communities can be seen as separate entities.
+		(i)	Import directory of all timestamped undirected graph files of dataset, file type .dl.
+		(ii)	Perform metrics for node degree, betweenness centrality, closeness centrality, and eigenvector centrality on graph and resize nodes based on one of these measures selected by the user.
+		(iii)	Perform modularity measures and then perform a circular layout that partitions communities into succinct circles of nodes of the same modularity class so all communities can be seen as separate entities.
 		(iv)	Export resulting data file, list of .dl time stamps, and 2D visualization of analyzed graph, file types .gexf, .txt, and .pdf.
 		(v)	Imported .dl files reflect proper graph data structure.
 		(vi)	Imported .dl files are properly dated in file name for use as timestamp.
 		(vii) 	Stop words must have been properly removed so that they do not skew meaning of network.
 		(viii)	Error messages are thrown for exceptions.
-		(ix)	Configuration file to allow user to choose a few different metrics.
+		(ix)	Configuration file to allow user to choose from a few different metrics.
+		(x)	For every individually imported .dl file, run modularity and export resulting .gexf file for it.  This ensures communities are calculated at each timestamped layer to later be used for noodling in 3-D visualization.
 
 	D. 3-D Visualization of Semantic Network (VSN)
 	Component uses Java in conjunction with Partiview 0.91
 		(i)	Import data file of analyzed graph, file type .gexf, .txt file of timestamps.
 		(ii)	Using each time stamp of original text files, make each time stamp a separate network layer in 3D space.
-		(iii)	Generate colored meshes connecting communities of each layer through time, these will be called “noodles” for the remainder of this document.
+		(iii)	Generate colored meshes connecting communities of nodes of each layer through time, these will be called “noodles” for the remainder of this document.  
 		(iv)	Noodles will be connected through time if they meet specified time threshold.
-		(v)	Export resulting data files of 3D visualization, file type node, edge, and mesh .speck, .cmap, .cf, .sct.
-		(vi)	Imported .gexf file is properly formatted for use.
-		(vii)	Imported .txt file of timestamps reflect timestamps of original raw .txt files.
-		(viii)	Error messages are thrown for exceptions.
-		(ix)	Time range can be set to establish different meshes.
+		(v)	Noodles will be split and converged based on modularity classes of each layer, and not just on the base global layout.
+		(vi)	Export resulting data files of 3D visualization, file type node, edge, and mesh .speck, .cmap, .cf, .sct.
+		(vii)	Imported .gexf file is properly formatted for use.
+		(viii)	Imported .txt file of timestamps reflect timestamps of original raw .txt files.
+		(ix)	Error messages are thrown for exceptions.
+		(x)	Time range can be set to establish different meshes.
 
 	E. Website for Hosting Components
+	See Figure 2. GUI of Website hosting components for layout reference.
 		a.	User Management
 			(i)	User registration page.
 			(ii)	User login page and log out button.
@@ -141,7 +142,7 @@ Breakdown of Components
 
 		d.	Network Analysis Page
 			(i)	Network Analysis Page will allow a user to select individual .dl files (or all files at once will be selected) and click a button that will perform Network Analysis on all selected files.
-			(ii)	The resulting .gexf from the sum of graphs will be transferred to appear on the 3-D Visualization of Semantic Network for use.
+			(ii)	The resulting .gexf from the sum of graphs, individual .gexf files, and .txt file of timestamps will be transferred to appear on the 3-D Visualization of Semantic Network for use.
 			(iii) 	Processed .gexf and .pdf files will be downloadable from the Network Analysis page.
 			(iv)	UGNG processed .dl files must have been properly transferred for use in Network Analysis page.
 			(v)	Error messages thrown if network not properly analyzed.
@@ -152,6 +153,7 @@ Breakdown of Components
 			(iii)	Network Analysis processed .gexf files must have been properly transferred for use in VSN page.
 			(iv)	Error messages thrown if network not properly visualized.
 
+Figure 2. - GUI of Website hosting components.
 Technologies Used and Reference
 	(i)	MAMP 3.5
 		https://www.mamp.info/en/
