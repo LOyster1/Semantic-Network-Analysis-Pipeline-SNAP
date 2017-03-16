@@ -4,9 +4,27 @@
 		<script type="text/javascript" src="<?php echo asset_url(); ?>js/active_preprocess.js"></script>
 		<link rel="stylesheet" href="/website_stuff/assets/css/menuStyle.css" type="text/css" />
 		<title>Raw Uploads</title>
+
+		<script type="text/javascript">
+		    function selectAll(box) {
+				var checkBoxes = document.getElementsByTagName('input');
+				for(var i=0; i < checkBoxes.length; i++) {
+					if(checkBoxes[i].type == 'checkbox') {
+						checkBoxes[i].checked = box.checked;
+					}
+				}
+			}
+		</script>
+
 	</head>
 	<body>
 		<?php include 'navi.php'; ?>
+		<li>Natural Language Processing</li>
+		<li >This page is for uploading raw .txt files and performing Natural Language Processing using provided tool kits, resulting in new .txt files.</li>
+		<li>Provided toolkits allow for Stemming, Tokenization, Lemmatization, Sentence Splitting, Parts of Speech Recognition and Name Entity Recognition.</li>
+		<li >File dates must be present in the file name in the form YYYY-MM-DD ie 2004-05-26.</li>
+		<li >This date is used as time stamp to later represent the the file's nodes as a layer in 3D space.</li>
+		<br />
 
 		<?php 
 		echo $error;
@@ -32,8 +50,9 @@
 
 		<?php 
 			echo '<ul>';
-			echo '<form id="checkbox_form" name="checkbox_form" method="post" action="raw_uploads/submit_files">';
-
+			echo '<form id="checkbox_form" name="checkbox_form" method="post" action="raw_uploads/submit_files" >';
+			//echo '<form id="checkbox_form" name="checkbox_form" method="post" action="/submit_files">';
+			echo "<input type='checkbox' name='select_all' onClick='selectAll(this)' > Select All<br/>";
 			foreach($files as $file => $file_name)
 			{
 				$file_parts=pathinfo($file_name);
@@ -60,7 +79,7 @@
 			// </div>
 			
 			
-			echo '<button name="file_action" value="batch_preprocess" type="submit">Preprocess</button>';
+			echo '<button name="file_action" value="batch_preprocess"  type="submit">Preprocess</button>';
 			
 			echo form_dropdown('stemming',
 				array(
@@ -126,8 +145,7 @@
 			for($i = 0; $i < 5; $i++){
 				echo '<br/>';
 			}
-			echo '<button name="file_action" value="delete" type="submit">Delete</button>';
-			echo '<button name="file_action" value="download" type="submit">Download</button>';
+			echo '<button name="file_action" value="delete" type="submit">Delete</button>	<button name="file_action" value="download" type="submit">Download</button>';
 
 			echo '</form>';
 			echo '</ul>';

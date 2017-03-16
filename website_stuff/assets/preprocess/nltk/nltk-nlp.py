@@ -5,6 +5,7 @@ import nltk
 from nltk.tree import ParentedTree
 from nltk.stem import WordNetLemmatizer
 from nltk.corpus import wordnet
+from nltk.tokenize import PunktSentenceTokenizer
 
 def get_wordnet_pos(treebank_tag):
 	if treebank_tag.startswith('J'):
@@ -61,36 +62,56 @@ SENTENCE = 'S'
 _ners = []
 first = 1 
 current = ''
-def ner_process(parent):
-	ner = ''
-	global SENTENCE, _ners, first, current
-	for node in parent:
-		if type(node) is nltk.Tree:
-			if node.label() == SENTENCE:
-				sys.stdout.write('')
-			else:
-				for leaf in node.leaves():
-					ner = '{}/{}/{}'.format(leaf[0].encode("ascii", "ignore"), leaf[1], node.label())
-					current = leaf[0]
-					_ners.append(ner)
-			ner_process(node)
-		else:
-			if first == 1:
-				ner = '{}/{}'.format(node[0].encode("ascii", "ignore"), node[1])
-				first = 0 
-				_ners.append(ner)
-			elif node[0] != current:
-				ner = '{}/{}'.format(node[0].encode("ascii", "ignore"), node[1])
-				_ners.append(ner)
-			else:
-				pass
+def ner_process(file_in):
+#def ner_process(parent):
+	# ner = ''
+	# global SENTENCE, _ners, first, current
+	# for node in parent:
+	# 	if type(node) is nltk.Tree:
+	# 		if node.label() == SENTENCE:
+	# 			sys.stdout.write('')
+	# 		else:
+	# 			for leaf in node.leaves():
+	# 				ner = '{}/{}/{}'.format(leaf[0].encode("ascii", "ignore"), leaf[1], node.label())
+	# 				current = leaf[0]
+	# 				_ners.append(ner)
+	# 		ner_process(node)
+	# 	else:
+	# 		if first == 1:
+	# 			ner = '{}/{}'.format(node[0].encode("ascii", "ignore"), node[1])
+	# 			first = 0 
+	# 			_ners.append(ner)
+	# 		elif node[0] != current:
+	# 			ner = '{}/{}'.format(node[0].encode("ascii", "ignore"), node[1])
+	# 			_ners.append(ner)
+	# 		else:
+	# 			pass
+
+
+	sample_text = "The world is a strange place. Filled with cats and dogs. Guam is an island in the Pacific Ocean. The United States of America is a grand place with Donald Trump as President. Canada is Americas hat. I used to work for Alaska's Division of Election."
+	#custom_sent_tokenizer = PunktSentenceTokenizer(sample_text)
+	#tokenized = custom_sent_tokenizer.tokenize(sample_text)
+	namedEnt = ""
+
+	target = open("target.txt", 'w')
+	
+	stringFile = file_in
+
+	print(type(stringFile))
+
+	words = nltk.word_tokenize(stringFile)
+	tagged = nltk.pos_tag(words)
+	namedEnt = nltk.ne_chunk(tagged, binary=True)
+			
+	target.write(str(namedEnt))
+	return namedEnt
 
 def main():
 	doc = []
 	sents = []
 	pos_tagged = []
 	lemmas = []
-	ner_tagged = []
+	#ner_tagged = []
 
 	file = ''
 	
@@ -120,7 +141,11 @@ def main():
 		#for pos in pos_tagged:
 		#	#print pos 
 		#	sys.stdout.write(pos)
-		sys.stdout.write(" ".join(pos_tagged))
+		sys.stdout.write("\n".join(pos_tagged))
+
+		f = open("test_write.txt", "w")
+		f.write("\n".join(pos_tagged))
+		f.close()
 
 	elif sys.argv[-1] == 'lemmatize':
 		lemmas = lemma_process(uni_str)
@@ -130,12 +155,17 @@ def main():
 		sys.stdout.write(" ".join(lemmas))
 
 	elif sys.argv[-1] == 'ner_tag':
-		_sents = nltk.sent_tokenize(uni_str)
-		_tokens = [nltk.word_tokenize(sent) for sent in _sents]
-		_pos = [nltk.pos_tag(sent) for sent in _tokens]
-		_chunked = nltk.ne_chunk_sents(_pos, binary=False)
-		ner_process(_chunked)
-		sys.stdout.write(" ".join(_ners))
+		# _sents = nltk.sent_tokenize(uni_str)
+		# _tokens = [nltk.word_tokenize(sent) for sent in _sents]
+		# _pos = [nltk.pos_tag(sent) for sent in _tokens]
+		# _chunked = nltk.ne_chunk_sents(_pos, binary=False)
+		# ner_process(_chunked)
+		# sys.stdout.write(" ".join(_ners))
+
+		ner_tagged = ner_process(uni_str)
+		sys.stdout.write(str(ner_tagged))
+
+	#open("test_write.txt", "w")
 
 main()
 #

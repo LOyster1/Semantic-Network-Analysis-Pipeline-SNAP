@@ -71,7 +71,9 @@ class Complete extends CI_Controller{
 				$this->session->set_userdata($key, $val);
 			}
 			$this->session->set_flashdata('flash_message', 'Redirect to home');
-			redirect(site_url().'/home');
+			//redirect(site_url().'/home');
+			redirect(site_url().'/home', 'refresh');
+			//redirect('semantic_networks', 'refresh');
 			
 		}
 	}

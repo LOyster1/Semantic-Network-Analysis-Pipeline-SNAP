@@ -8,6 +8,6 @@
 <body>
 	<?php include 'navi.php'; ?>
 	<h1>Home</h1>
-	<h2>Welcome <?php echo $firstName; echo $file_dir; ?></h2><br/>
+	<h2>Welcome <?php echo $firstName; ?></h2><br/>
 </body>
 </html>

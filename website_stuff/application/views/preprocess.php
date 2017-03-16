@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<script type="text/javascript" src="<?php echo asset_url(); ?>js/active_preprocess.js"></script>
+	<script type="text/javascript" src="<?php echo asset_url(); ?>js/active_preprocess.js"></script>
 
-<link rel="stylesheet" href="<?php echo asset_url(); ?>css/menuStyle.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo asset_url(); ?>css/menuStyle.css" type="text/css" />
 
-<style>
-.right{
-	position: absolute;
-	right: 200px;
-	border: 3px solid #73AD21;
-}
-p{
-	font-size: 80%;
-}
-</style>
-
+	<style>
+		.right{
+			position: absolute;
+			right: 200px;
+			border: 3px solid #73AD21;
+		}
+		p{
+			font-size: 80%;
+		}
+	</style>
 </head>
 	<body>
 		<?php include 'navi.php'; ?><!-- Load Navigation -->
