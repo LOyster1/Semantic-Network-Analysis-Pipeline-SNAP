@@ -133,14 +133,13 @@ class Preprocessed_uploads extends CI_Controller{
 
 	public function delete_files($files_to_delete){
 		$source=$this->file_dir. '/preprocessed/';
-			
-			foreach($files_to_delete as $file){
-				$delete[] = $source.$file;
-			}
-			foreach($delete as $file){
-				unlink($file);
-			}
-			redirect('preprocessed_uploads', 'refresh');
+		foreach($files_to_delete as $file){
+			$delete[] = $source.$file;
+		}
+		foreach($delete as $file){
+			unlink($file);
+		}
+		redirect('preprocessed_uploads', 'refresh');
 	}
 }
 

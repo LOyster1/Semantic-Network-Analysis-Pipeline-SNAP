@@ -252,14 +252,13 @@ class Raw_uploads extends CI_Controller{
 
 	public function delete_files($files_to_delete){
 		$source=$this->file_dir. '/raw/';
-			
-			foreach($files_to_delete as $file){
-				$delete[] = $source.$file;
-			}
-			foreach($delete as $file){
-				unlink($file);
-			}
-			redirect('raw_uploads', 'refresh');
+		foreach($files_to_delete as $file){
+			$delete[] = $source.$file;
+		}
+		foreach($delete as $file){
+			unlink($file);
+		}
+		redirect('raw_uploads', 'refresh');
 	}
 }
 /* End of file raw_uploads.php */

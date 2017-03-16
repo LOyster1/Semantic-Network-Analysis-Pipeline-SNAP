@@ -117,13 +117,13 @@ class Partiview_generator extends CI_Controller{
 
 	public function delete_files($files_to_delete){
 		$source=$this->file_dir. '/partiview_generator/';
-			foreach($files_to_delete as $file){
-				$delete[] = $source.$file;
-			}
-			foreach($delete as $file){
-				unlink($file);
-			}
-			redirect('partiview_generator', 'refresh');
+		foreach($files_to_delete as $file){
+			$delete[] = $source.$file;
+		}
+		foreach($delete as $file){
+			unlink($file);
+		}
+		redirect('partiview_generator', 'refresh');
 	}
 }
 
