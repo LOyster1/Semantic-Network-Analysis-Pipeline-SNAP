@@ -147,27 +147,27 @@ class Semantic_networks extends CI_Controller
 	}
 	public function download($files)
 	{
-	// 	foreach($files as $file => $file_name)
-	// 	{
-	// 		$file_path=$this->file_dir.'/semantic_networks/'.$file_name;
-	// 		if (file_exists($file_path)) 
-	// 		{
-	// 		    header('Content-Description: File Transfer');
-	// 		    header('Content-Type: application/octet-stream');
-	// 		    header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
-	// 		    header('Expires: 0');
-	// 		    header('Cache-Control: must-revalidate');
-	// 		    header('Pragma: public');
-	// 		    header('Content-Length: ' . filesize($file_path));
-	// 		    readfile($file_path);
-	// 		    exit;
-	// 		    $this->index();
-	// 		}
-	// 		else 
-	// 		{
-	// 			$this->index();
-	// 		}
-	// 	}
+		// foreach($files as $file => $file_name)
+		// {
+		// 	$file_path=$this->file_dir.'/semantic_networks/'.$file_name;
+		// 	if (file_exists($file_path)) 
+		// 	{
+		// 	    header('Content-Description: File Transfer');
+		// 	    header('Content-Type: application/octet-stream');
+		// 	    header('Content-Disposition: attachment; filename="'.basename($file_path).'"');
+		// 	    header('Expires: 0');
+		// 	    header('Cache-Control: must-revalidate');
+		// 	    header('Pragma: public');
+		// 	    header('Content-Length: ' . filesize($file_path));
+		// 	    readfile($file_path);
+		// 	    exit;
+		// 	    $this->index();
+		// 	}
+		// 	else 
+		// 	{
+		// 		$this->index();
+		// 	}
+		// }
 
 		// $zipname = 'file.zip';
 		// $zip = new ZipArchive();
@@ -190,15 +190,12 @@ class Semantic_networks extends CI_Controller
 		if ($zip->open($zipname, ZipArchive::CREATE) !==TRUE){
 			exit("Can't open");
 		}
-		foreach($files as $file => $file_name)
-		{
+		foreach($files as $file => $file_name){
 			$file_path=$this->file_dir.'/semantic_networks/';
-			if (file_exists($file_path.$file_name)) 
-			{
+			if (file_exists($file_path.$file_name)){
 				$zip->addFile($file_name);
 			}
-			else 
-			{
+			else {
 				$this->index();
 			}
 		}
@@ -206,7 +203,7 @@ class Semantic_networks extends CI_Controller
 		header('Content-Type: application/zip');
 		header('Content-Disposition: attachment; filename='.$zipname);
 		header('Content-Length: ' . filesize($zipname));
-		readfile($zipname);
+		readfile($zip);
 	}
 	
 	public function delete_files($files_to_delete){

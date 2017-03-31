@@ -1,0 +1,51 @@
+(S
+  The/DT
+  world/NN
+  is/VBZ
+  a/DT
+  strange/JJ
+  place/NN
+  ./.
+  Filled/VBN
+  with/IN
+  cats/NNS
+  and/CC
+  dogs/NNS
+  ./.
+  Guam/NNP
+  is/VBZ
+  an/DT
+  island/NN
+  in/IN
+  the/DT
+  (NE Pacific/NNP Ocean/NNP)
+  ./.
+  The/DT
+  (NE United/NNP States/NNPS)
+  of/IN
+  (NE America/NNP)
+  is/VBZ
+  a/DT
+  grand/JJ
+  place/NN
+  with/IN
+  (NE Donald/NNP Trump/NNP)
+  as/IN
+  President/NNP
+  ./.
+  (NE Canada/NNP)
+  is/VBZ
+  (NE Americas/NNP)
+  hat/NN
+  ./.
+  I/PRP
+  used/VBD
+  to/TO
+  work/VB
+  for/IN
+  (NE Alaska/NNP)
+  's/POS
+  Division/NNP
+  of/IN
+  Election/NNP
+  ./.)

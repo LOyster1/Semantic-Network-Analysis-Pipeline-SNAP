@@ -187,12 +187,15 @@ class Raw_uploads extends CI_Controller{
 		if($this->form_validation->run() == FALSE){
 
 			$this->session->set_flashdata('flash_message', 'Need to select at least tokenization or check at least one file for preprocessing.');
-			$this->index();
-		} else{
+			redirect('raw_uploads', 'refresh');//--reload the page
+		} 
+		else if($files==null){
+			$this->session->set_flashdata('flash_message', 'Need to select a file for preprocessing.');
+			redirect('raw_uploads', 'refresh');//--reload the page
+		}
+		else{
 			$post = $this->input->post();
-			foreach($files as $file => $file_name)
-			{
-
+			foreach($files as $file => $file_name){
 				$preprocess_path = '/Applications/MAMP/htdocs/website_stuff/assets/preprocess/';
 				$output = '';
 				$cmd = '';

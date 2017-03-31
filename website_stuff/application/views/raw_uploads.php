@@ -42,7 +42,7 @@
 		<?php echo form_open_multipart('raw_uploads/upload_text'); ?>
 		<div id="upload_area"> 
 			<div class="upload_form" id="upload_form">
-				<input type="file" name="raw_files[]" id="raw_files[]" multiple="multiple"/>
+				<input type="file" name="raw_files[]" id="raw_files[]" multiple="multiple" accept="text/plain"/>
 				<input type="submit" value="Upload" name="submit"/>
 			</div>
 		</div>
@@ -96,9 +96,10 @@
 			echo form_dropdown('tokenize',
 				array(
 					'' => 'Tokenize',
-					'corenlp' => 'CoreNLP',
+					//'corenlp' => 'CoreNLP',
 					'nltk' => 'NLTK',
-					'spacy' => 'spaCy'),
+					//'spacy' => 'spaCy'
+					),
 				'',
 				array(
 					'name' => 'tokenize',
